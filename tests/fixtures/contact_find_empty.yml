@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://abc123:secret@api.moxiworks.com/api/contacts
+    body:
+      encoding: UTF-8
+      string: partner_contact_id=booyuh&moxi_works_agent_id=1234abcd&contact_id=booyuh
+    headers:
+      Accept:
+      - application/vnd.moxi-platform+json;version=1
+      Accept-Encoding:
+      - gzip, deflate
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Content-Length:
+      - '68'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: 'OK '
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"42c51a279cbe7301f9be3e14b88ddffc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 1dde62e3-4e32-4f94-9669-1d16b7777f2c
+      X-Runtime:
+      - '1.107840'
+      Server:
+      - WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)
+      Date:
+      - Tue, 05 Apr 2016 11:51:05 GMT
+      Content-Length:
+      - '1034'
+      Connection:
+      - Keep-Alive
+      Set-Cookie:
+      - _wms_svc_public_session=eXFDL0FBZVh5Wk1sV1A4akxkV2pJOXVRQ2dzaGNCMFRBQmZSNHJueTVaZXlkMlZXVjR2TEYyakdhVERSRlJuaVdBV05pYkZ6djNiTUNEOGVJa2o5UXp1dGZuaHBOdTVhU2NPblJ0R3VxelZUMGNTZXNvNkx3Tzc5bXBWUGI2cVpUSmI4UWRzOHJCa0IybC9JRk9xaktrRXlIOTltLzlCSURaTzMzVkZOdGQwPS0tMEllNitrbjJDenVITTlSQmZUeVlHQT09--a0d6cb2cc845551d3f5fc9afe1b23802073e68d5;
+        path=/; HttpOnly
+    body:
+      encoding: UTF-8
+      string: '{"moxi_works_agent_id":"1234abcd","partner_agent_id":"","partner_contact_id":"booyuh","moxi_works_contact_id":"009b9297977c","contact_name":null,"gender":null,"primary_email_address":null,"secondary_email_address":null,"primary_phone_number":null,"secondary_phone_number":null,"home_street_address":null,"home_city":null,"home_state":null,"home_zip":null,"home_neighborhood":null,"home_country":null,"job_title":null,"occupation":null,"business_website":null,"property_url":"","property_mls_id":"","property_street_address":"","property_city":"","property_state":"","property_zip":"","property_beds":"","property_baths":"","property_list_price":"","property_listing_status":"","property_photo_url":"","search_city":"","search_state":"","search_zip":"","search_min_beds":"","search_min_baths":"","search_min_price":"","search_max_price":"","search_min_sq_ft":"","search_max_sq_ft":"","search_min_lot_size":"","search_max_lot_size":"","search_min_year_built":"","search_max_year_built":"","search_property_types":""}'
+    http_version: 
+  recorded_at: Tue, 05 Apr 2016 11:51:05 GMT
+recorded_with: VCR 2.9.3
