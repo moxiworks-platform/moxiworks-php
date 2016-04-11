@@ -1,5 +1,5 @@
 {
-  "name": "tres/moxiworks_platform",
+  "name": "moxiworks/moxiworks_platform",
   "homepage": "https://github.com/moxiworks-platform/moxiworks-php",
   "description": "Moxi Works Platform Client Library for PHP.",
   "keywords": ["moxiworks"],
