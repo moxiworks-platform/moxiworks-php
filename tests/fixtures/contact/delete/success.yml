@@ -6,10 +6,10 @@
             Host: 'api.moxiworks.com'
             Expect: null
             Accept-Encoding: null
-            User-Agent: 'GuzzleHttp/6.2.0 curl/7.43.0 PHP/5.5.30'
             Authorization: 'Basic YWJjMTIzOnNlY3JldA=='
             Accept: application/vnd.moxi-platform+json;version=1
             Content-Type: application/x-www-form-urlencoded
+            User-Agent: 'moxiworks_platform php client'
         body: 'moxi_works_agent_id=1234abcd&partner_contact_id=booyuh'
     response:
         status:
@@ -30,4 +30,4 @@
             Content-Length: '1069'
             Connection: Keep-Alive
             Set-Cookie: 'request_method=DELETE; path=/, _wms_svc_public_session=MDJuSDMrWlUyZ3VaWHcvTldOTUVBTkh0VUhrcjhzblpBMVFaNmF6eGM1aHU3UHk1QnA3V3ArZTRQTVN2MjRGZUp1Y3p3cU9wdEpKcm5UaDlqcENzeHJ1a0NmR2dnQ200dkQrQzVoVkJWSGJyRW1HRDhNUEhPSUxsUm0wY0MvVjIrc2xzWUQ4emxBQWFiZkEvSU5UQThtYjZuc2lKNTFnKzNBYjJDaTVFYlZ3PS0tRjJReGpQN0liMWhoY3haemp3Uk9CQT09--9cbe00ed919d4c125a1ebab7858d6c4fb6493d15; path=/; HttpOnly'
-        body: '{"status":"fail"}'
+        body: '{"status":"success"}'

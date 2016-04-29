@@ -12,7 +12,8 @@ class Resource {
         $headers = array (
             'Authorization' => static::authHeader(),
             'Accept' => static::acceptHeader(),
-            'Content-Type' => static::contentTypeHeader()
+            'Content-Type' => static::contentTypeHeader(),
+            'User-Agent' => static::userAgentHeader()
         );
         return $headers;
     }
@@ -33,6 +34,31 @@ class Resource {
 
     public static function contentTypeHeader() {
         return 'application/x-www-form-urlencoded';
+    }
+
+    public static function userAgentHeader() {
+        return 'moxiworks_platform php client';
+    }
+
+    public static function apiConnection($method, $url, $attributes) {
+        $client = new \GuzzleHttp\Client();
+        $json = null;
+        $type = ($method == 'GET') ? 'query' : 'form_params';
+        $query = [
+            $type => $attributes,
+            'headers' =>  Resource::headers(),
+            'debug' => Config::getDebug()
+        ];
+        $res = $client->request($method, $url, $query);
+        $body = $res->getBody();
+        try {
+            $json = json_decode($body, true);
+        } catch (\Exception $e) {
+            throw new RemoteRequestFailureException("unable to parse remote response $e\n response:\n  $body");
+        }
+        Resource::checkForErrorInResponse($json);
+
+        return $json;
     }
 
     public static function checkForErrorInResponse($json) {

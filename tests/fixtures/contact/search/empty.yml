@@ -1,0 +1,32 @@
+
+-
+    request:
+        method: GET
+        url: 'https://api.moxiworks.com/api/contacts?moxi_works_agent_id=1234abcd&contact_name=buckminster%20fuller'
+        headers:
+            Host: 'api.moxiworks.com'
+            Accept-Encoding: null
+            Authorization: 'Basic YWJjMTIzOnNlY3JldA=='
+            Accept: application/vnd.moxi-platform+json;version=1
+            Content-Type: application/x-www-form-urlencoded
+            User-Agent: 'moxiworks_platform php client'
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: 'OK '
+        headers:
+            X-Frame-Options: SAMEORIGIN
+            X-Xss-Protection: '1; mode=block'
+            X-Content-Type-Options: nosniff
+            Content-Type: 'application/json; charset=utf-8'
+            Etag: 'W/"d751713988987e9331980363e24189ce"'
+            Cache-Control: 'max-age=0, private, must-revalidate'
+            X-Request-Id: 48fbdddd-d73e-4e3d-a04a-94ff1130d263
+            X-Runtime: '0.110341'
+            Server: 'WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)'
+            Date: 'Fri, 29 Apr 2016 14:04:25 GMT'
+            Content-Length: '2'
+            Connection: Keep-Alive
+            Set-Cookie: '_wms_svc_public_session=NGFBMHIzeHpudnowV05lVlRUNm1HYlBkdVFKN3BxWklGTkZzMVNRSW9Ub1lndjZwL29lRE82NGVnQ0t6VVc0dzZ6MHhFVEppTWVwOFlNT2Q1L3ZQSVI5ZTZETFJPTkxXNEs1VWhzUlpTd0pPSG43N0E3aE5waWhtTW1BckluSnNqcml2dkdPREwxclNDTXJVSmlGOE9kZ0p6d0JKbDVJVTdnNUIzb1YyT1FRPS0tMW8zOHBCUHk1b2tTQnNleG9yU1ZjZz09--200ef9b031d73137836235ac5c72efdf5165bfab; path=/; HttpOnly'
+        body: '[]'

@@ -6,10 +6,10 @@
             Host: 'api.moxiworks.com'
             Expect: null
             Accept-Encoding: null
-            User-Agent: 'GuzzleHttp/6.2.0 curl/7.43.0 PHP/5.5.30'
             Authorization: 'Basic YWJjMTIzOnNlY3JldA=='
             Accept: application/vnd.moxi-platform+json;version=1
             Content-Type: application/x-www-form-urlencoded
+            User-Agent: 'moxiworks_platform php client'
         body: 'moxi_works_agent_id=1234abcd&partner_contact_id=booyuh'
     response:
         status:
