@@ -9,7 +9,7 @@ use MoxiworksPlatform\Exception\InvalidResponseException;
 use Symfony\Component\Translation\Tests\StringClass;
 
 
-class Contact extends Resource{
+class Contact extends Resource {
 
     /**
     * @var string the Moxi Works Platform ID of the agent
