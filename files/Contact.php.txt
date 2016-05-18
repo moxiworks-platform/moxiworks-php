@@ -9,7 +9,7 @@ use MoxiworksPlatform\Exception\InvalidResponseException;
 use Symfony\Component\Translation\Tests\StringClass;
 
 
-class Contact extends Resource{
+class Contact extends Resource {
 
     /**
     * @var string the Moxi Works Platform ID of the agent
@@ -29,14 +29,7 @@ class Contact extends Resource{
     *
      */
     public $partner_contact_id;
-
-    /**
-    * @var string Moxi Works Platform ID for the contact
-    *   Moxi Works Platform ID for the Contact
-    *
-     */
-    public $moxi_works_contact_id;
-
+    
     /**
     * @var string -- Default ''
     *   the full URL of the business website to be associated with this Contact
@@ -530,7 +523,10 @@ class Contact extends Resource{
      *
      *
      * @param array $attributes
+     *
      * @return Contact|null
+     *
+     * @throws ArgumentException if required parameters are not included
      * @throws RemoteRequestFailureException
      */
     public static function create($attributes=[]) {
@@ -540,14 +536,9 @@ class Contact extends Resource{
     /**
      * Find a previously created Contact on Moxi Works Platform.
      *
-     * <code>
-     *   MoxiworksPlatform\Contact::find([
-     *     moxi_works_agent_id: '123abc'])
-     * </code>
-     *
      * find can be performed including your system's contact id and the Moxi Works Agent ID in a parameter array
      *  <code>
-     *  \MoxiworksPlatform\Contact::find(moxi_works_agent_id: 'abc123', partner_contact_id: 'my_system_contact_id')
+     *  \MoxiworksPlatform\Contact::find([moxi_works_agent_id: 'abc123', partner_contact_id: 'my_system_contact_id'])
      *  </code>
      * @param array $attributes
      *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Agent ID for the agent to which this contact is to be associated
@@ -555,11 +546,60 @@ class Contact extends Resource{
      *
      *
      * @return Contact|null
+     *
+     * @throws ArgumentException if required parameters are not included
      * @throws RemoteRequestFailureException
      */
     public static function find($attributes=[]) {
         return Contact::sendRequest('GET', $attributes);
     }
+
+    /**
+     * Search for Contact by name/email/phone on Moxi Works Platform.
+     *
+     * search can be performed by including contact_name and/or email_address and/or phone_number in a parameter array
+     *  <code>
+     *  \MoxiworksPlatform\Contact::search([moxi_works_agent_id: 'abc123', contact_name: 'Buckminster Fuller'])
+     *  </code>
+     * @param array $attributes
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Agent ID for the agent to which this contact is to be associated
+     *       <br><b>contact_name</b>full name of the contact
+     *       <br><b>email_address</b>email address of the contact
+     *       <br><b>phone_number</b>phone number of the contact
+     *
+     *
+     * @return Array of Contact objects
+     *
+     * @throws ArgumentException if required parameters are not included
+     * @throws ArgumentException if at least one search parameter is not defined
+     * @throws RemoteRequestFailureException
+     */
+    public static function search($attributes=[]) {
+        $method = 'GET';
+        $url = Config::getUrl() . "/api/contacts";
+        $results = array();
+
+        $required_opts = array('moxi_works_agent_id');
+        $search_attrs = array('contact_name', 'phone_number', 'email_address');
+
+        if(count(array_intersect(array_keys($attributes), $required_opts)) != count($required_opts))
+            throw new ArgumentException(implode(',', $required_opts) . " are required");
+
+        if(count(array_intersect(array_keys($attributes), $search_attrs)) == 0)
+            throw new ArgumentException("at least one of " . implode(',', $search_attrs) . " are required");
+
+        $json = Resource::apiConnection($method, $url, $attributes);
+        
+        if(!isset($json) || empty($json))
+            return $results;
+
+        foreach($json as $element) {
+            $contact = new Contact($element);
+            array_push($results, $contact);
+        }
+        return $results;
+    }
+    
 
     /**
     *
@@ -591,7 +631,6 @@ class Contact extends Resource{
     *     optional Contact parameters
      * </h2>
     *
-    *      <br><b>moxi_works_contact_id</b> Moxi Works Platform contact ID
     *      <br><b>business_website</b>   full url of a website associated with this contact
     *      <br><b>contact_name</b>  full name of this contact in format "Firstname Middlename Lastname"
     *      <br><b>gender </b> can be "male" or "female" or "m" or "f"
@@ -674,8 +713,11 @@ class Contact extends Resource{
     }
 
     /**
-     * Remove a contact previously created on the Moxi Works Platform from an agent
+     * Remove a contact your system has previously created on the Moxi Works Platform from an agent
+     *
      * @return Contact|null
+     *
+     * @throws ArgumentException if required parameters are not included
      * @throws RemoteRequestFailureException
      */
     public function delete() {
@@ -687,7 +729,10 @@ class Contact extends Resource{
      * @param $method
      * @param array $opts
      * @param null $url
+     *
      * @return Contact|null
+     *
+     * @throws ArgumentException if required parameters are not included
      * @throws RemoteRequestFailureException
      */
     private static function sendRequest($method, $opts=[], $url=null) {
@@ -698,21 +743,7 @@ class Contact extends Resource{
         if(count(array_intersect(array_keys($opts), $required_opts)) != count($required_opts))
             throw new ArgumentException(implode(',', $required_opts) . " are required");
         $contact = null;
-        $client = new \GuzzleHttp\Client();
-        $type = ($method == 'GET') ? 'query' : 'form_params';
-        $query = [
-            $type => $opts,
-            'headers' =>  Resource::headers(),
-            'debug' => Config::getDebug()
-        ];
-        $res = $client->request($method, $url, $query);
-        $body = $res->getBody();
-        try {
-            $json = json_decode($body, true);
-        } catch (\Exception $e) {
-            throw new RemoteRequestFailureException("unable to parse remote response $e\n response:\n  $body");
-        }
-        Contact::checkForErrorInResponse($json);
+        $json = Resource::apiConnection($method, $url, $opts);
         $contact = (!isset($json) || empty($json)) ? null : new Contact($json);
         return $contact;
     }
