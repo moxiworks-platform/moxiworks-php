@@ -713,7 +713,7 @@ class Contact extends Resource {
     }
 
     /**
-     * Remove a contact previously created on the Moxi Works Platform from an agent
+     * Remove a contact your system has previously created on the Moxi Works Platform from an agent
      *
      * @return Contact|null
      *

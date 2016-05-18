@@ -1,0 +1,34 @@
+-
+    request:
+        method: POST
+        url: 'https://api.moxiworks.com/api/events'
+        headers:
+            Host: 'api.moxiworks.com'
+            Expect: null
+            Accept-Encoding: null
+            Authorization: 'Basic YWJjMTIzOnNlY3JldA=='
+            Accept: application/vnd.moxi-platform+json;version=1
+            Content-Type: application/x-www-form-urlencoded
+            User-Agent: 'moxiworks_platform php client'
+        body: 'moxi_works_agent_id=1234abcd&partner_event_id=booyuh'
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: 'OK '
+        headers:
+            X-Frame-Options: SAMEORIGIN
+            X-Xss-Protection: '1; mode=block'
+            X-Content-Type-Options: nosniff
+            Content-Type: 'application/json; charset=utf-8'
+            Etag: 'W/"bf5e4474191c1cbdf09e08dbf8430c13"'
+            Cache-Control: 'max-age=0, private, must-revalidate'
+            X-Request-Id: d4d56c21-5c9e-4317-82dd-9ce770ede532
+            X-Runtime: '4.767603'
+            Server: 'WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)'
+            Date: 'Mon, 11 Apr 2016 02:19:44 GMT'
+            Content-Length: '1069'
+            Connection: Keep-Alive
+            Set-Cookie: 'request_method=POST; path=/, _wms_svc_public_session=MDJuSDMrWlUyZ3VaWHcvTldOTUVBTkh0VUhrcjhzblpBMVFaNmF6eGM1aHU3UHk1QnA3V3ArZTRQTVN2MjRGZUp1Y3p3cU9wdEpKcm5UaDlqcENzeHJ1a0NmR2dnQ200dkQrQzVoVkJWSGJyRW1HRDhNUEhPSUxsUm0wY0MvVjIrc2xzWUQ4emxBQWFiZkEvSU5UQThtYjZuc2lKNTFnKzNBYjJDaTVFYlZ3PS0tRjJReGpQN0liMWhoY3haemp3Uk9CQT09--9cbe00ed919d4c125a1ebab7858d6c4fb6493d15; path=/; HttpOnly'
+        body: '{"partner_event_id":"17c58ff85172093286272cffa4897610","moxi_works_agent_id":"BiaB_test9@windermeretest.com","event_subject":"foo deeaz","event_location":"1234 there ave","note":"yo, whatup?","send_reminder":true,"remind_minutes_before":10,"is_meeting":false,"event_start":1462376120,"event_end":1462462520,"cancelled":false,"recurring":false,"all_day":false,"attendees":null}'
+
