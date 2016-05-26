@@ -5,7 +5,7 @@
   "keywords": ["moxiworks"],
   "type": "library",
   "license": "Apache-2.0",
-  "version": "0.2.2",
+  "version": "0.4.1",
   "authors": [
     {
       "name": "Moxi Works",
@@ -22,7 +22,9 @@
     "guzzlehttp/guzzle": "~5.3|~6.0.1|~6.1",
     "guzzlehttp/psr7": "~1.0",
     "guzzlehttp/promises": "~1.0",
-    "mtdowling/jmespath.php": "~2.2"
+    "mtdowling/jmespath.php": "~2.2",
+    "phpunit/phpunit": "4.8.26",
+    "php-vcr/php-vcr": "1.2.8"
 
   },
   "require-dev": {
@@ -32,13 +34,11 @@
     "ext-json": "*",
     "ext-dom": "*",
     "ext-simplexml": "*",
-    "phpunit/phpunit": "~4.0|~5.0",
     "behat/behat": "~3.0",
     "doctrine/cache": "~1.4",
     "nette/neon": "^2.3",
     "andrewsville/php-token-reflection": "^1.4",
-    "psr/cache": "^1.0",
-    "php-vcr/php-vcr": "^1.2"
+    "psr/cache": "^1.0"
   },
   "suggest": {
     "ext-curl": "To send requests using cURL",

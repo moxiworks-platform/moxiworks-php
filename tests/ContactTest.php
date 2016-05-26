@@ -27,6 +27,8 @@ class ContactTest extends PHPUnit_Framework_TestCase {
     }
 
     public function testSaveThrowsExceptionWhenNoAuthorizationDataHasBeenSet() {
+        \MoxiworksPlatform\Credentials::setIdentifier(null);
+        \MoxiworksPlatform\Credentials::setSecret(null);
         $this->setExpectedException('\MoxiworksPlatform\Exception\AuthorizationException');
         \VCR\VCR::insertCassette('contact/update/success.yml');
         $contact = new \MoxiworksPlatform\Contact(['moxi_works_agent_id' => '1234abcd', 'partner_contact_id' => 'booyuh']);

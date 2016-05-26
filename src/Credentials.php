@@ -92,7 +92,7 @@ class Credentials
      * @return bool Whether the Moxi Works Platform Identifier and Secret have been set.
      */
     public static function ready() {
-        return (Credentials::getIdentifier() and Credentials::getSecret());
+        return (null !== Credentials::getIdentifier() && null !== Credentials::getSecret());
     }
 
 

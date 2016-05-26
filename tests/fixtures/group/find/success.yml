@@ -1,0 +1,33 @@
+
+-
+    request:
+        method: GET
+        url: 'https://api.moxiworks.com/api/groups?moxi_works_agent_id=abc123&moxi_works_group_name=foobar'
+        headers:
+            Host: 'api.moxiworks.com'
+            Accept-Encoding: null
+            Authorization: 'Basic YWJjMTIzOnNlY3JldA=='
+            Accept: application/vnd.moxi-platform+json;version=1
+            Content-Type: application/x-www-form-urlencoded
+            User-Agent: 'moxiworks_platform php client'
+        body: null
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: 'OK '
+        headers:
+            X-Frame-Options: SAMEORIGIN
+            X-Xss-Protection: '1; mode=block'
+            X-Content-Type-Options: nosniff
+            Content-Type: 'application/json; charset=utf-8'
+            Etag: 'W/"bf5e4474191c1cbdf09e08dbf8430c13"'
+            Cache-Control: 'max-age=0, private, must-revalidate'
+            X-Request-Id: d4d56c21-5c9e-4317-82dd-9ce770ede532
+            X-Runtime: '4.767603'
+            Server: 'WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)'
+            Date: 'Mon, 11 Apr 2016 02:19:44 GMT'
+            Content-Length: '1069'
+            Connection: Keep-Alive
+            Set-Cookie: 'request_method=GET; path=/, _wms_svc_public_session=MDJuSDMrWlUyZ3VaWHcvTldOTUVBTkh0VUhrcjhzblpBMVFaNmF6eGM1aHU3UHk1QnA3V3ArZTRQTVN2MjRGZUp1Y3p3cU9wdEpKcm5UaDlqcENzeHJ1a0NmR2dnQ200dkQrQzVoVkJWSGJyRW1HRDhNUEhPSUxsUm0wY0MvVjIrc2xzWUQ4emxBQWFiZkEvSU5UQThtYjZuc2lKNTFnKzNBYjJDaTVFYlZ3PS0tRjJReGpQN0liMWhoY3haemp3Uk9CQT09--9cbe00ed919d4c125a1ebab7858d6c4fb6493d15; path=/; HttpOnly'
+        body: '{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_id":"abc123","moxi_works_group_name":"foobar","contacts":[{"moxi_works_agent_id":"BiaB_test9@moxiworkstest.com","partner_contact_id":"s123213dljfsldjflsjdsoo","contact_name":"Firstname Middlenyme Larstnam","gender":"M","primary_email_address":"me@justabout.right.here","secondary_email_address":"me.too@justabout.right.here","primary_phone_number":"9995551212","secondary_phone_number":"(333) 555-1185","home_street_address":"1234 Sesame St.","home_city":"Cityville","home_state":"Stateland","home_zip":"12345-6789","home_country":"Ottoman Empire","job_title":"Junior Bacon Burner","note":null,"occupation":"chef","business_website":"http://my.website.is.here","property_url":"http://my.property.website.is/here","property_mls_id":"abc123","property_street_address":"2345 67th place","property_city":"Townland","property_state":"Statesville","property_zip":"98765-4321","property_beds":"","property_baths":"","property_list_price":"","property_listing_status":"Active","property_photo_url":"http://property.photo.is/here.jpg","search_city":"Searchland","search_state":"Searchsylvania","search_zip":"12345-6789","search_min_beds":"","search_min_baths":"","search_min_price":"","search_max_price":"","search_min_sq_ft":"","search_max_sq_ft":"","search_min_lot_size":"","search_max_lot_size":"","search_min_year_built":"","search_max_year_built":"","search_property_types":"Condo, Single Family, Treehouse"}]}'

@@ -33,6 +33,8 @@ class EventTest extends PHPUnit_Framework_TestCase
 
 
     public function testSaveThrowsExceptionWhenNoAuthorizationDataHasBeenSet() {
+        \MoxiworksPlatform\Credentials::setIdentifier(null);
+        \MoxiworksPlatform\Credentials::setSecret(null);
         $this->setExpectedException('\MoxiworksPlatform\Exception\AuthorizationException');
         \VCR\VCR::insertCassette('event/update/success.yml');
         $event = new \MoxiworksPlatform\Event(['moxi_works_agent_id' => '1234abcd', 'partner_event_id' => 'booyuh']);
