@@ -216,7 +216,7 @@ class Event extends Resource {
     /**
      *  Update a previously created Event on The Moxi Works Platform
      * <code>
-     *   MoxiworksPlatform\Event::create([
+     *   MoxiworksPlatform\Event::update([
      *     moxi_works_agent_id: '123abc',
      *     partner_event_id: '1234',
      *     event_subject: 'Birthday Party',
