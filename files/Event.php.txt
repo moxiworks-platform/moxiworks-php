@@ -77,6 +77,24 @@ class Event extends Resource {
     public $all_day;
 
     /**
+     * @var string a comma separated list of attendee IDs using Contact IDs from your system (partner_contact_id) that have already been added to The Moxi Works Platform as a Contact
+     *
+     * Contact must already have been created in order to be added as an attendee.
+     *
+     * Contact presence at event is mandatory
+     */
+    public $required_attendee;
+
+    /**
+     * @var string a comma separated list of attendee IDs using Contact IDs from your system (partner_contact_id) that have already been added to The Moxi Works Platform as a Contact
+     *
+     * Contact must already have been created in order to be added as an attendee.
+     *
+     * Contact presence at event is optional
+     */
+    public $optional_attendee;
+
+    /**
      * Event constructor.
      * @param array $data
      */
@@ -198,7 +216,7 @@ class Event extends Resource {
     /**
      *  Update a previously created Event on The Moxi Works Platform
      * <code>
-     *   MoxiworksPlatform\Event::create([
+     *   MoxiworksPlatform\Event::update([
      *     moxi_works_agent_id: '123abc',
      *     partner_event_id: '1234',
      *     event_subject: 'Birthday Party',

@@ -29,13 +29,7 @@ class Contact extends Resource {
     *
      */
     public $partner_contact_id;
-    
-    /**
-    * @var string -- Default ''
-    *   the full URL of the business website to be associated with this Contact
-    *
-     */
-    public $business_website;
+
 
     /**
     * @var string -- Default ''
@@ -448,7 +442,6 @@ class Contact extends Resource {
      *     home_neighborhood: 'my hood',
      *     job_title: 'junior bacon burner',
      *     occupation: 'chef',
-     *     business_website: 'http://bear.wrass.ler',
      *     primary_email_address: 'goo@goo.goo',
      *     primary_phone_number: '123213',
      *     property_mls_id: '1232312abcv',
@@ -463,7 +456,6 @@ class Contact extends Resource {
      *     optional Contact parameters
      * </h2>
      *
-     *      <br><b>business_website</b>   full url of a website associated with this contact
      *      <br><b>contact_name</b>  full name of this contact in format "Firstname Middlename Lastname"
      *      <br><b>gender </b> can be "male" or "female" or "m" or "f"
      *      <br><b>home_street_address</b>  the street address and street on which the contact lives
@@ -616,7 +608,6 @@ class Contact extends Resource {
     *     home_neighborhood: 'my hood',
     *     job_title: 'junior bacon burner',
     *     occupation: 'chef',
-    *     business_website: 'http://bear.wrass.ler',
     *     primary_email_address: 'goo@goo.goo',
     *     primary_phone_number: '123213',
     *     property_mls_id: '1232312abcv',
@@ -631,7 +622,6 @@ class Contact extends Resource {
     *     optional Contact parameters
      * </h2>
     *
-    *      <br><b>business_website</b>   full url of a website associated with this contact
     *      <br><b>contact_name</b>  full name of this contact in format "Firstname Middlename Lastname"
     *      <br><b>gender </b> can be "male" or "female" or "m" or "f"
     *      <br><b>home_street_address</b>  the street address and street on which the contact lives

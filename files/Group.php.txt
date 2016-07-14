@@ -88,7 +88,7 @@ class Group extends Resource
      *  </code>
      * @param array $attributes
      *       <br><b>moxi_works_agent_id *REQUIRED* </b> string The Moxi Works Agent ID for the agent to which this group is associated
-     *       <br><b>moxi_works_group_name </b> string The name of the Group on Moxi Works Platform
+     *       <br><b>name </b> string The name of the Group on Moxi Works Platform
      *
      *
      * @return Array of Group objects
