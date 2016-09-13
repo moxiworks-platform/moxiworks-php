@@ -20,18 +20,6 @@ class Agent extends Resource {
      */
     public $moxi_works_agent_id;
 
-    /**
-     *
-     * @var array a group of strings representing any mls the agent 
-     *      is a member of
-     */
-    public $mls;
-    
-    /**
-     * 
-     * @var string any accreditation the agent has
-     */
-    public $accreditation;
 
     /**
      * @var string the agent's address, street and number
@@ -78,10 +66,6 @@ class Agent extends Resource {
      */
     public $name;
 
-    /**
-     * @var string agent's license number
-     */
-    public $license;
 
     /**
      * @var string agent's mobile phone number
@@ -119,11 +103,6 @@ class Agent extends Resource {
     public $secondary_email_address;
 
     /**
-     * @var array any languages the agent speaks
-     */
-    public $languages;
-
-    /**
      * @var string agent's twitter handel
      */
     public $twitter;
@@ -142,16 +121,6 @@ class Agent extends Resource {
      * @var string agent's home page url
      */
     public $home_page;
-
-    /**
-     * @var string agent's date of birth
-     */
-    public $birth_date;
-
-    /**
-     * @var string agent's title
-     */
-    public $title;
 
     /**
      * @var string url of a full sized profile image of the agent
@@ -195,6 +164,56 @@ class Agent extends Resource {
         $url = Config::getUrl() . "/api/agents/" . $attributes['moxi_works_agent_id'];
         return Agent::sendRequest('GET', $attributes, $url);
     }
+
+    /**
+     * Search for Agents by Company on Moxi Works Platform.
+     *
+     * search can be performed by including moxi_works_company_id and updated_since in a parameter array
+     *  <code>
+     *  \MoxiworksPlatform\Agent::search([moxi_works_company_id: 'abc123', updated_since: 1463595006])
+     *  </code>
+     * @param array $attributes
+     *       <br><b>moxi_works_company_id *REQUIRED* </b> string The Moxi Works Company ID for the company in which we are searching for agents
+     *
+     *       <h2>
+     *     optional Task search parameters
+     * </h2>
+     *       <br><b>updated_since </b> integer  Unix timestamp representing the start time for the search. If no <i>updated_since</i> parameter is included in the request, only agents updated in the last seven days will be included in the response.
+     *
+     * @return Array paged response array with the format:
+     *   [
+     *     page_number: [Integer],
+     *     total_pages: [Integer],
+     *     agents:  [Array] containing MoxiworkPlatform\Agent objects
+     *   ]
+     *
+     * @throws ArgumentException if required parameters are not included
+     * @throws ArgumentException if at least one search parameter is not defined
+     * @throws RemoteRequestFailureException
+     */
+    public static function search($attributes=[]) {
+        $method = 'GET';
+        $url = Config::getUrl() . "/api/agents";
+        $agents = array();
+
+        $required_opts = array('moxi_works_company_id');
+
+        if(count(array_intersect(array_keys($attributes), $required_opts)) != count($required_opts))
+            throw new ArgumentException(implode(',', $required_opts) . " are required");
+
+        $json = Resource::apiConnection($method, $url, $attributes);
+
+        if(!isset($json) || empty($json))
+            return null;
+
+        foreach ($json['agents'] as $c) {
+            $agent = new Agent($c);
+            array_push($agents, $agent);
+        }
+        $json['agents'] = $agents;
+        return $json;
+    }
+
 
     /**
      * @param $method
