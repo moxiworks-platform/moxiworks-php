@@ -42,12 +42,44 @@ class AgentTest extends PHPUnit_Framework_TestCase {
         \VCR\VCR::eject();
     }
 
-    public  function throwsExceptionWhenNoSearchParametersPassed() {
+    public  function throwsExceptionWhenNoFindParametersPassed() {
         $this->setExpectedException('\MoxiworksPlatform\Exception\ArgumentException');
         \VCR\VCR::insertCassette('agent/find/success.yml');
         $agent = \MoxiworksPlatform\Agent::search(['moxi_works_agent_id' => 'abc123']);
         \VCR\VCR::eject();
 
     }
-    
+
+    public function testSearchReturnsArrayWhenRequestSucceeds() {
+        $c = new \MoxiworksPlatform\Credentials('abc123', 'secret');
+        \VCR\VCR::insertCassette('agent/search/success.yml');
+        $results = \MoxiworksPlatform\Agent::search(['moxi_works_company_id' => '1234abcd', 'updated_since' => 1463595006]);
+        $this->assertTrue(is_array($results));
+        \VCR\VCR::eject();
+    }
+
+    public  function throwsExceptionWhenNoSearchParametersPassed() {
+        $this->setExpectedException('\MoxiworksPlatform\Exception\ArgumentException');
+        \VCR\VCR::insertCassette('agent/find/success.yml');
+        $results = \MoxiworksPlatform\Agent::search([]);
+        \VCR\VCR::eject();
+    }
+
+    public  function throwsExceptionWhenNoMoxiWorksCompanyIdParametersPassed() {
+        $this->setExpectedException('\MoxiworksPlatform\Exception\ArgumentException');
+        \VCR\VCR::insertCassette('agent/find/success.yml');
+        $results = \MoxiworksPlatform\Agent::search([ 'updated_since' => 1463595006]);
+        \VCR\VCR::eject();
+    }
+
+    public function testSearchReturnsArrayWhenNoUpdatedSinceParameterPassed() {
+        $c = new \MoxiworksPlatform\Credentials('abc123', 'secret');
+        \VCR\VCR::insertCassette('agent/search/success.yml');
+        $results = \MoxiworksPlatform\Agent::search(['moxi_works_company_id' => '1234abcd']);
+        $this->assertTrue(is_array($results));
+        \VCR\VCR::eject();
+    }
+
+
+
 }

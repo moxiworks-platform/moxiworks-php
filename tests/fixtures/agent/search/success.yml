@@ -1,0 +1,64 @@
+-
+    request:
+        method: GET
+        url: 'https://api.moxiworks.com/api/agents?moxi_works_company_id=1234abcd&updated_since=1463595006'
+        headers:
+            Host: 'api.moxiworks.com'
+            Accept-Encoding: null
+            Authorization: 'Basic YWJjMTIzOnNlY3JldA=='
+            Accept: application/vnd.moxi-platform+json;version=1
+            Content-Type: application/x-www-form-urlencoded
+            User-Agent: 'moxiworks_platform php client'
+        body: null
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: 'OK '
+        headers:
+            X-Frame-Options: SAMEORIGIN
+            X-Xss-Protection: '1; mode=block'
+            X-Content-Type-Options: nosniff
+            Content-Type: 'application/json; charset=utf-8'
+            Etag: 'W/"bf5e4474191c1cbdf09e08dbf8430c13"'
+            Cache-Control: 'max-age=0, private, must-revalidate'
+            X-Request-Id: d4d56c21-5c9e-4317-82dd-9ce770ede532
+            X-Runtime: '4.767603'
+            Server: 'WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)'
+            Date: 'Mon, 11 Apr 2016 02:19:44 GMT'
+            Content-Length: '1069'
+            Connection: Keep-Alive
+            Set-Cookie: 'request_method=GET; path=/, _wms_svc_public_session=MDJuSDMrWlUyZ3VaWHcvTldOTUVBTkh0VUhrcjhzblpBMVFaNmF6eGM1aHU3UHk1QnA3V3ArZTRQTVN2MjRGZUp1Y3p3cU9wdEpKcm5UaDlqcENzeHJ1a0NmR2dnQ200dkQrQzVoVkJWSGJyRW1HRDhNUEhPSUxsUm0wY0MvVjIrc2xzWUQ4emxBQWFiZkEvSU5UQThtYjZuc2lKNTFnKzNBYjJDaTVFYlZ3PS0tRjJReGpQN0liMWhoY3haemp3Uk9CQT09--9cbe00ed919d4c125a1ebab7858d6c4fb6493d15; path=/; HttpOnly'
+        body: '{"page_number":1,"total_pages":1,"agents":[{"moxi_works_agent_id":"afdfadafdfad@daadfadfsdfsa.com","office_address_street":"18811 28th Ave W, Suite J","office_address_city":"Lynnwood","office_address_state":"WY","office_address_zip":"98036","name":"Affdasfadsdfas Adfsafdsadfsadsf","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"(555) 776-9580","primary_email_address":"afdfadafdfad@daadfadfsdfsa.com","secondary_email_address":"asdfdfsaadfsfads@dfaadfafdafs.com","twitter":null,"google_plus":null,"facebook":null,"home_page":"www.google.com","profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"},{"moxi_works_agent_id":"asdfasdfasdfasdfasfd@asdf.com","office_address_street":null,"office_address_city":"Seattle","office_address_state":"WY","office_address_zip":"","name":"Asdf Asdf","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"","primary_email_address":"asdfasdfasdfasdfasfd@asdf.com","secondary_email_address":null,"twitter":null,"google_plus":null,"facebook":null,"home_page":null,"profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"},{"moxi_works_agent_id":"BiaB_test3@hhooommmestest.com","office_address_street":"3933 Lk Washington Blvd NE, Suite 100","office_address_city":"Kirkland","office_address_state":"WY","office_address_zip":"98033","name":"Freddy B Kruger","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"(555) 822-5100","primary_email_address":"beaupain_alt@hhooommmestest.com","secondary_email_address":"beaupain_alt@hhooommmestest.com","twitter":null,"google_plus":null,"facebook":null,"home_page":"foo.com","profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"},{"moxi_works_agent_id":"dummy_1283251@agentdigs.com","office_address_street":"251 E. Front Street, Ste. 400","office_address_city":"Boise","office_address_state":"ID","office_address_zip":"83702","name":"Jason Sommers","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"(555) 381-8000","primary_email_address":"dummy_1283251@agentdigs.com","secondary_email_address":null,"twitter":null,"google_plus":null,"facebook":null,"home_page":"hhooommmes.com","profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"},{"moxi_works_agent_id":"aroop28@gmail.com","office_address_street":"3933 Lk Washington Blvd NE, Suite 100","office_address_city":"Kirkland","office_address_state":"WY","office_address_zip":"98033","name":"Michael Meyers","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"(425) 822-5100","primary_email_address":"ahearl@hhooommmestest.com","secondary_email_address":null,"twitter":null,"google_plus":null,"facebook":null,"home_page":"www.hhooommmes.com","profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"},{"moxi_works_agent_id":"test_user27@hhooommmestest.com","office_address_street":"Sdfg","office_address_city":"adsf","office_address_state":"CO","office_address_zip":"98654","name":"Test ABC DefG User27 III","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"(555) 555-5555","primary_email_address":"test_user27@hhooommmestest.com","secondary_email_address":null,"twitter":null,"google_plus":null,"facebook":null,"home_page":"","profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"}]}'
+-
+    request:
+        method: GET
+        url: 'https://api.moxiworks.com/api/agents?moxi_works_company_id=1234abcd'
+        headers:
+            Host: 'api.moxiworks.com'
+            Accept-Encoding: null
+            Authorization: 'Basic YWJjMTIzOnNlY3JldA=='
+            Accept: application/vnd.moxi-platform+json;version=1
+            Content-Type: application/x-www-form-urlencoded
+            User-Agent: 'moxiworks_platform php client'
+        body: null
+    response:
+        status:
+            http_version: '1.1'
+            code: '200'
+            message: 'OK '
+        headers:
+            X-Frame-Options: SAMEORIGIN
+            X-Xss-Protection: '1; mode=block'
+            X-Content-Type-Options: nosniff
+            Content-Type: 'application/json; charset=utf-8'
+            Etag: 'W/"bf5e4474191c1cbdf09e08dbf8430c13"'
+            Cache-Control: 'max-age=0, private, must-revalidate'
+            X-Request-Id: d4d56c21-5c9e-4317-82dd-9ce770ede532
+            X-Runtime: '4.767603'
+            Server: 'WEBrick/1.3.1 (Ruby/2.2.4/2015-12-16)'
+            Date: 'Mon, 11 Apr 2016 02:19:44 GMT'
+            Content-Length: '1069'
+            Connection: Keep-Alive
+            Set-Cookie: 'request_method=GET; path=/, _wms_svc_public_session=MDJuSDMrWlUyZ3VaWHcvTldOTUVBTkh0VUhrcjhzblpBMVFaNmF6eGM1aHU3UHk1QnA3V3ArZTRQTVN2MjRGZUp1Y3p3cU9wdEpKcm5UaDlqcENzeHJ1a0NmR2dnQ200dkQrQzVoVkJWSGJyRW1HRDhNUEhPSUxsUm0wY0MvVjIrc2xzWUQ4emxBQWFiZkEvSU5UQThtYjZuc2lKNTFnKzNBYjJDaTVFYlZ3PS0tRjJReGpQN0liMWhoY3haemp3Uk9CQT09--9cbe00ed919d4c125a1ebab7858d6c4fb6493d15; path=/; HttpOnly'
+        body: '{"page_number":1,"total_pages":1,"agents":[{"moxi_works_agent_id":"afdfadafdfad@daadfadfsdfsa.com","office_address_street":"18811 28th Ave W, Suite J","office_address_city":"Lynnwood","office_address_state":"WY","office_address_zip":"98036","name":"Affdasfadsdfas Adfsafdsadfsadsf","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"(555) 776-9580","primary_email_address":"afdfadafdfad@daadfadfsdfsa.com","secondary_email_address":"asdfdfsaadfsfads@dfaadfafdafs.com","twitter":null,"google_plus":null,"facebook":null,"home_page":"www.google.com","profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"},{"moxi_works_agent_id":"asdfasdfasdfasdfasfd@asdf.com","office_address_street":null,"office_address_city":"Seattle","office_address_state":"WY","office_address_zip":"","name":"Asdf Asdf","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"","primary_email_address":"asdfasdfasdfasdfasfd@asdf.com","secondary_email_address":null,"twitter":null,"google_plus":null,"facebook":null,"home_page":null,"profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"},{"moxi_works_agent_id":"BiaB_test3@hhooommmestest.com","office_address_street":"3933 Lk Washington Blvd NE, Suite 100","office_address_city":"Kirkland","office_address_state":"WY","office_address_zip":"98033","name":"Freddy B Kruger","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"(555) 822-5100","primary_email_address":"beaupain_alt@hhooommmestest.com","secondary_email_address":"beaupain_alt@hhooommmestest.com","twitter":null,"google_plus":null,"facebook":null,"home_page":"foo.com","profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"},{"moxi_works_agent_id":"dummy_1283251@agentdigs.com","office_address_street":"251 E. Front Street, Ste. 400","office_address_city":"Boise","office_address_state":"ID","office_address_zip":"83702","name":"Jason Sommers","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"(555) 381-8000","primary_email_address":"dummy_1283251@agentdigs.com","secondary_email_address":null,"twitter":null,"google_plus":null,"facebook":null,"home_page":"hhooommmes.com","profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"},{"moxi_works_agent_id":"aroop28@gmail.com","office_address_street":"3933 Lk Washington Blvd NE, Suite 100","office_address_city":"Kirkland","office_address_state":"WY","office_address_zip":"98033","name":"Michael Meyers","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"(425) 822-5100","primary_email_address":"ahearl@hhooommmestest.com","secondary_email_address":null,"twitter":null,"google_plus":null,"facebook":null,"home_page":"www.hhooommmes.com","profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"},{"moxi_works_agent_id":"test_user27@hhooommmestest.com","office_address_street":"Sdfg","office_address_city":"adsf","office_address_state":"CO","office_address_zip":"98654","name":"Test ABC DefG User27 III","mobile_phone_number":null,"alt_phone_number":null,"fax_phone_number":null,"main_phone_number":null,"office_phone_number":"(555) 555-5555","primary_email_address":"test_user27@hhooommmestest.com","secondary_email_address":null,"twitter":null,"google_plus":null,"facebook":null,"home_page":"","profile_image_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=200","profile_thumb_url":"http://media.moxiworks.com/media/ImageStore.dll?id=852087C5D3A533DD\u0026w=75"}]}'
