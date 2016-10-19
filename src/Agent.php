@@ -20,7 +20,6 @@ class Agent extends Resource {
      */
     public $moxi_works_agent_id;
 
-
     /**
      * @var string the agent's address, street and number
      */
@@ -65,7 +64,6 @@ class Agent extends Resource {
      * @var string the agent's name
      */
     public $name;
-
 
     /**
      * @var string agent's mobile phone number
@@ -131,6 +129,11 @@ class Agent extends Resource {
      * @var string url of a thumb sized profile image of the agent
      */
     public $profile_thumb_url;
+
+    /**
+     * @var string title -- any business titles associated with the agent
+     */
+    public $title;
 
     /**
      * Agent constructor.

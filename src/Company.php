@@ -25,6 +25,17 @@ class Company {
      */
     public $name;
 
+    /**
+     * Company constructor.
+     * @param array $data
+     */
+    function __construct(array $data) {
+        foreach($data as $key => $val) {
+            if(property_exists(__CLASS__,$key)) {
+                $this->$key = $val;
+            }
+        }
+    }
 
 
     /**
@@ -83,6 +94,7 @@ class Company {
             $company = new Company($element);
             array_push($results, $company);
         }
+
         return $results;
     }
 
