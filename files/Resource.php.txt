@@ -72,4 +72,13 @@ class Resource {
         return true;
     }
 
+    public static function underscore($attr) {
+        $out = preg_replace( '/::/', '/', $attr);
+        $out = preg_replace('/([A-Z]+)([A-Z][a-z])/','\1_\2', $out);
+        $out = preg_replace('/([a-z\d])([A-Z])/','\1_\2', $out);
+        $out = str_replace( "-", "_", $out);
+        $out = ltrim(strtolower($out), '_');
+        return $out;
+    }
+
 }
