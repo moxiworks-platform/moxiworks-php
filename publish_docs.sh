@@ -18,6 +18,8 @@ done
 
 cd -
 
+git add classes files
+
 git commit -a -m "Documentation Update"
 
 git checkout master
