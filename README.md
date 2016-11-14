@@ -8,7 +8,5 @@ https://packagist.org/packages/moxiworks/moxiworks_platform
 
 Update PHP Docs:
 
-php phpDocumentor.phar -d src
+./publish_docs.sh
 
-git checkout gh-pages
-git push upstream gh-pages
