@@ -12,13 +12,17 @@ use Symfony\Component\Translation\Tests\StringClass;
 class Agent extends Resource {
     /**
      * @var string the Moxi Works Platform ID of the agent
-     *   moxi_works_agent_id is the Moxi Works Platform ID of the agent which a contact is
-     *   or is to be associated with.
+     *   moxi_works_agent_id is the Moxi Works Platform ID of the agent
      *
      *   this must be set for any Moxi Works Platform transaction
      *
      */
     public $moxi_works_agent_id;
+
+    /**
+     * @var string the UUID of the office which the Agent is associated
+     */
+    public $moxi_works_office_id;
 
     /**
      * @var string the agent's address, street and number
@@ -152,7 +156,7 @@ class Agent extends Resource {
      *
      * find can be performed including the Moxi Works Agent ID in a parameter array
      *  <code>
-     *  \MoxiworksPlatform\Contact::find([moxi_works_agent_id: 'abc123'])
+     *  \MoxiworksPlatform\Listing::find([moxi_works_agent_id: 'abc123'])
      *  </code>
      * @param array $attributes
      *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Agent ID for the agent
@@ -232,7 +236,7 @@ class Agent extends Resource {
         if($url == null) {
             $url = Config::getUrl() . "/api/agents";
         }
-        $required_opts = array('moxi_works_agent_id');
+        $required_opts = array('moxi_works_agent_id', 'moxi_works_company_id');
         if(count(array_intersect(array_keys($opts), $required_opts)) != count($required_opts))
             throw new ArgumentException(implode(',', $required_opts) . " required");
         $agent = null;

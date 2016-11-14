@@ -12,7 +12,7 @@ use Symfony\Component\Translation\Tests\StringClass;
 class ActionLog extends Resource {
     /**
      * @var string the Moxi Works Platform ID of the agent
-     *   moxi_works_agent_id is the Moxi Works Platform ID of the agent which a contact is
+     *   moxi_works_agent_id is the Moxi Works Platform ID of the agent which an action log entry is
      *   or is to be associated with.
      *
      *   this must be set for any ActionLog create transaction
@@ -47,6 +47,19 @@ class ActionLog extends Resource {
      */
     public $body;
 
+    /**
+     * @var string
+     *   the type of this ActionLog entry
+     *
+     */
+    public $type;
+
+    /**
+     * @var integer
+     *   the timestamp of this ActionLog entry
+     *
+     */
+    public $timestamp;
 
     /**
      * ActionLog constructor.

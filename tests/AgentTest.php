@@ -42,13 +42,6 @@ class AgentTest extends PHPUnit_Framework_TestCase {
         \VCR\VCR::eject();
     }
 
-    public  function throwsExceptionWhenNoFindParametersPassed() {
-        $this->setExpectedException('\MoxiworksPlatform\Exception\ArgumentException');
-        \VCR\VCR::insertCassette('agent/find/success.yml');
-        $agent = \MoxiworksPlatform\Agent::search(['moxi_works_agent_id' => 'abc123']);
-        \VCR\VCR::eject();
-
-    }
 
     public function testSearchReturnsArrayWhenRequestSucceeds() {
         $c = new \MoxiworksPlatform\Credentials('abc123', 'secret');
