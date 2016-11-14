@@ -50,6 +50,11 @@ class Agent extends Resource {
     public $office_address_street;
 
     /**
+     * @var string the agent's office address, suite or office number
+     */
+    public $office_address_street2;
+
+    /**
      * @var string the agent's office address, city
      */
     public $office_address_city;
