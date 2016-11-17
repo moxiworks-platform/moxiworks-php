@@ -85,6 +85,11 @@ class Listing extends Resource {
     public $bathrooms_partial;
 
     /**
+     * @var integer | null number of rooms that are bathrooms | nil if no data available
+     */
+    public $bathrooms_total_integer;
+
+    /**
      * @var integer|null number of three_quarter bathrooms null if no data available
      */
     public $bathrooms_three_quarter;
