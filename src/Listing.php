@@ -235,11 +235,6 @@ class Listing extends Resource {
     public $living_area;
 
     /**
-     * @var string a short description of the property
-     */
-    public $title;
-
-    /**
      * @var boolean whether the property has a view
      */
     public $view_yn;
