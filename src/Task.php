@@ -179,8 +179,8 @@ class Task extends Resource {
      *       <br><b>due_at *REQUIRED* </b>Unix timestamp representing the due date of this task
      *       <br><b>duration *REQUIRED* </b>the length in minutes that the task is expected to take
      *       <h2>
-     *     optional Task parameters
-     * </h2>
+     *              optional Task parameters
+     *       </h2>
      *
      *      <br><b>name</b>  short description of the task to be displayed
      *      <br><b>description</b> a more detailed description of the task (max 255 characters)

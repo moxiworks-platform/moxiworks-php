@@ -161,7 +161,7 @@ class Agent extends Resource {
      *
      * find can be performed including the Moxi Works Agent ID in a parameter array
      *  <code>
-     *  \MoxiworksPlatform\Listing::find([moxi_works_agent_id: 'abc123'])
+     *  \MoxiworksPlatform\Agent::find([moxi_works_agent_id: 'abc123'])
      *  </code>
      * @param array $attributes
      *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Agent ID for the agent
