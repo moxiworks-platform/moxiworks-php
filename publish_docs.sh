@@ -12,7 +12,7 @@ cd output
 
 for i in `ls`
 do
-    mv ../$i /tmp/$i
+    rm -r ../$i
     mv $i ../$i
 done
 
