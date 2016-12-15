@@ -1,6 +1,6 @@
 #!/bin/sh
 
-mv output /tmp/output/ 
+rm -r output
 
 git checkout master
 
