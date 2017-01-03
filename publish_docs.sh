@@ -22,4 +22,7 @@ git add classes files
 
 git commit -a -m "Documentation Update"
 
+git push origin gh-pages
+git push upstream gh-pages
+
 git checkout master
