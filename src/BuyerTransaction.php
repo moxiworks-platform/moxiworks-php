@@ -63,7 +63,6 @@ class BuyerTransaction extends Resource {
      *
      * This will be a single digit integer that can be [1,2,3,4,5].
      * For more information on BuyerTransaction stages see The Moxi Works Platform BuyerTransaction Stages Documentation
-     * @link https://moxiworks-platform.github.io/#buyertransaction-stages The Moxi Works Platform BuyerTransaction Stages Documentation
      *
      */
     public $stage;
@@ -79,7 +78,6 @@ class BuyerTransaction extends Resource {
      * This will be an enumerated string that can be can be
      * 'initialized', 'configured' , 'active' , 'pending'  or 'complete'
      * For more information on BuyerTransaction stages see The Moxi Works Platform BuyerTransaction Stages Documentation
-     * @link https://moxiworks-platform.github.io/#buyertransaction-stages The Moxi Works Platform BuyerTransaction Stages Documentation
      *
      */
     public $stage_name;
@@ -259,7 +257,6 @@ class BuyerTransaction extends Resource {
      * Newly created BuyerTransaction objects will automatically be created in
      * stage 3 (active)
      *
-     * @link https://moxiworks-platform.github.io/#promoting-buyertransaction-stage The Moxi Works Platform Promoting BuyerTransaction Documentation
      *
      * @var boolean
      *
