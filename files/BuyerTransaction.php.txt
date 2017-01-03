@@ -63,8 +63,7 @@ class BuyerTransaction extends Resource {
      *
      * This will be a single digit integer that can be [1,2,3,4,5].
      * For more information on BuyerTransaction stages see
-     * <a href='https://moxiworks-platform.github.io/#buyertransaction-stages'>
-     * The Moxi Works Platform Documentation</a>
+     * @link https://moxiworks-platform.github.io/#buyertransaction-stages The Moxi Works Platform Documentation
      *
      */
     public $stage;
@@ -80,8 +79,7 @@ class BuyerTransaction extends Resource {
      * This will be an enumerated string that can be can be
      * 'initialized', 'configured' , 'active' , 'pending'  or 'complete'
      * For more information on BuyerTransaction stages see
-     * <a href='https://moxiworks-platform.github.io/#buyertransaction-stages'>
-     * The Moxi Works Platform Documentation</a>
+     * @link https://moxiworks-platform.github.io/#buyertransaction-stages The Moxi Works Platform Documentation
      *
      */
     public $stage_name;
@@ -256,7 +254,7 @@ class BuyerTransaction extends Resource {
      *
      * In order to promote a BuyerTransaction to the next stage, set  the
      * promote_transaction attribute to true. For more information about
-     * BuyerTransaction stages, see <a href='https://moxiworks-platform.github.io/#promoting-buyertransaction-stage>The Moxi Works Platform Documentation</a>.
+     * BuyerTransaction stages, see @link https://moxiworks-platform.github.io/#promoting-buyertransaction-stage The Moxi Works Platform Documentation
      * promote_transaction is only available for BuyerTransaction updates.
      * Newly created BuyerTransaction objects will automatically be created in
      * stage 3 (active)
