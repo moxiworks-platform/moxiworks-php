@@ -252,7 +252,7 @@ class BuyerTransaction extends Resource {
      *
      * In order to promote a BuyerTransaction to the next stage, set  the
      * promote_transaction attribute to true. For more information about
-     * BuyerTransaction stages, see The Moxi Works Platform Promoting BuyerTransaction Documentation
+     * BuyerTransaction stages, see The Moxi Works Platform Promoting BuyerTransaction Documentation.
      * promote_transaction is only available for BuyerTransaction updates.
      * Newly created BuyerTransaction objects will automatically be created in
      * stage 3 (active)
