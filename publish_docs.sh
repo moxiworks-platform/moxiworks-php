@@ -4,6 +4,8 @@ rm -r output
 
 git checkout master
 
+git commit -a -m "Documentation Update"
+
 php phpDocumentor.phar -d src
 
 git checkout gh-pages
