@@ -63,7 +63,7 @@ class SellerTransaction extends Resource {
      *
      * This will be a single digit integer that can be [1,2,3,4,5].
      * For more information on SellerTransaction stages see
-     * @link https://moxiworks-platform.github.io/#sellertransaction-stages The Moxi Works Platform Documentation
+     * { @link https://moxiworks-platform.github.io/#sellertransaction-stages The Moxi Works Platform Documentation }
      *
      */
     public $stage;
@@ -79,7 +79,7 @@ class SellerTransaction extends Resource {
      * This will be an enumerated string that can be can be
      * 'initialized', 'configured' , 'active' , 'pending'  or 'complete'
      * For more information on SellerTransaction stages see
-     * @link https://moxiworks-platform.github.io/#sellertransaction-stages The Moxi Works Platform Documentation
+     * { @link https://moxiworks-platform.github.io/#sellertransaction-stages The Moxi Works Platform Documentation }
      *
      */
     public $stage_name;
@@ -254,7 +254,7 @@ class SellerTransaction extends Resource {
      *
      * In order to promote a SellerTransaction to the next stage, set  the
      * promote_transaction attribute to true. For more information about
-     * SellerTransaction stages, see @link https://moxiworks-platform.github.io/#promoting-sellertransaction-stage The Moxi Works Platform Documentation.
+     * SellerTransaction stages, see { @link https://moxiworks-platform.github.io/#promoting-sellertransaction-stage The Moxi Works Platform Documentation. }
      * promote_transaction is only available for SellerTransaction updates.
      * Newly created SellerTransaction objects will automatically be created in
      * stage 3 (active)
