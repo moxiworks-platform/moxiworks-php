@@ -252,7 +252,7 @@ class SellerTransaction extends Resource {
      *
      * In order to promote a SellerTransaction to the next stage, set  the
      * promote_transaction attribute to true. For more information about
-     * SellerTransaction stages, see The Moxi Works Platform Promoting SellerTransaction Documentation
+     * SellerTransaction stages, see The Moxi Works Platform Promoting SellerTransaction Documentation.
      * promote_transaction is only available for SellerTransaction updates.
      * Newly created SellerTransaction objects will automatically be created in
      * stage 3 (active)
