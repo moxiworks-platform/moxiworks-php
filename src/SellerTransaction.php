@@ -147,11 +147,8 @@ class SellerTransaction extends Resource {
 
     /**
      *
-     * **NON MLS TRANSACTIONS ONLY ** this is the Unix timestamp
-     *   representing the date the property associated with the
-     *   SellerTransaction was put up for sale. This should be null if the
-     *   SellerTransaction is an MLS sale.
-     *
+     * Unix timestamp representing the date the agent initiated transaction
+     * discussions with the client.
      * @var Integer Unix timestamp
      *
      **/
