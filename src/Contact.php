@@ -105,10 +105,18 @@ class Contact extends Resource {
     public $job_title;
 
     /**
-    * @var string -- Default ''
-    *   the general occupation of this contact; ex: 'Software Developer'
-    *
-    *   
+     * @var string -- Default ''
+     *   human readable notes associated with the contact; ex: 'very interested in Springfield Heights'
+     *
+     *
+     */
+    public $note;
+
+    /**
+     * @var string -- Default ''
+     *   the general occupation of this contact; ex: 'Software Developer'
+     *
+     *
      */
     public $occupation;
 
@@ -442,6 +450,7 @@ class Contact extends Resource {
      *     home_neighborhood: 'my hood',
      *     job_title: 'junior bacon burner',
      *     occupation: 'chef',
+     *     note: 'some notable stuff',
      *     primary_email_address: 'goo@goo.goo',
      *     primary_phone_number: '123213',
      *     property_mls_id: '1232312abcv',
@@ -466,6 +475,7 @@ class Contact extends Resource {
      *      <br><b>home_country</b>  country in which this contact lives; can be abbreviation or full name
      *      <br><b>job_title</b>  the specific job title this contact has; ex  'Senior VP of Operations'
      *      <br><b>occupation the general</b> occupation of this contact; ex  'Software Developer'
+     *      <br><b>note</b> Human readable comments about this contact
      *      <br><b>partner_agent_id</b>  your system's unique ID for the agent this contact is to be associated with
      *      <br><b>primary_email_address</b>  the primary email address for this contact
      *      <br><b>primary_phone_number</b>  the primary phone number for this contact
@@ -608,6 +618,7 @@ class Contact extends Resource {
     *     home_neighborhood: 'my hood',
     *     job_title: 'junior bacon burner',
     *     occupation: 'chef',
+    *     note: 'some notable stuff',
     *     primary_email_address: 'goo@goo.goo',
     *     primary_phone_number: '123213',
     *     property_mls_id: '1232312abcv',
@@ -631,7 +642,8 @@ class Contact extends Resource {
     *      <br><b>home_neighborhood</b>  neighborhood in which this contact lives
     *      <br><b>home_country</b>  country in which this contact lives; can be abbreviation or full name
     *      <br><b>job_title</b>  the specific job title this contact has; ex  'Senior VP of Operations'
-    *      <br><b>occupation the general</b> occupation of this contact; ex  'Software Developer'
+    *      <br><b>occupation</b> occupation of this contact; ex  'Software Developer'
+    *      <br><b>note</b> Human readable comments about this contact
     *      <br><b>partner_agent_id</b>  your system's unique ID for the agent this contact is to be associated with
     *      <br><b>primary_email_address</b>  the primary email address for this contact
     *      <br><b>primary_phone_number</b>  the primary phone number for this contact
