@@ -255,7 +255,7 @@ class Listing extends Resource {
      *      "image_raw_url" => "(string) url to largest size image -- largest"
      * ]
      */
-    public $images;
+    public $listing_images;
 
     /**
      * Listing constructor.
