@@ -145,7 +145,7 @@ class Listing extends Resource {
     public $garage_spaces;
 
     /**
-     * @var boolean whether the property has waterfront acreage
+     * @var boolean|null whether the property has waterfront acreage
      */
     public $waterfront_yn;
 
