@@ -300,6 +300,7 @@ class Listing extends Resource {
      *  </code>
      * @param array $attributes
      *       <br><b>moxi_works_company_id *REQUIRED* </b> string The Moxi Works Company ID for the company in which we are searching for listings
+     *        <br><b>last_moxi_works_listing_id</b> string For multi-page responses (where the response value 'last_page' is false), send the listing ID of the last Listing in the previous page.
      *
      *       <h2>
      *     optional Task search parameters
@@ -308,8 +309,7 @@ class Listing extends Resource {
      *
      * @return Listing paged response array with the format:
      *   [
-     *     page_number: [Integer],
-     *     total_pages: [Integer],
+     *     final_page: [Boolean],
      *     listings:  [Array] containing MoxiworkPlatform\Listing objects
      *   ]
      *
