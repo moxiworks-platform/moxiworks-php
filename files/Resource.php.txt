@@ -15,6 +15,10 @@ class Resource {
             'Content-Type' => static::contentTypeHeader(),
             'User-Agent' => static::userAgentHeader()
         );
+        if(isset(Session::$cookie)) {
+            $headers['Cookie'] = Session::$cookie;
+        }
+
         return $headers;
     }
 
@@ -51,6 +55,9 @@ class Resource {
         ];
         $res = $client->request($method, $url, $query);
         $body = $res->getBody();
+        if(!isset(Session::$cookie)) {
+            Session::$cookie = $res->getHeader('Set-Cookie');
+        }
         try {
             $json = json_decode($body, true);
         } catch (\Exception $e) {

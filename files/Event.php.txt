@@ -81,18 +81,16 @@ class Event extends Resource {
      *
      * Contact must already have been created in order to be added as an attendee.
      *
-     * Contact presence at event is mandatory
      */
-    public $required_attendee;
+    public $attendees;
+
 
     /**
-     * @var string a comma separated list of attendee IDs using Contact IDs from your system (partner_contact_id) that have already been added to The Moxi Works Platform as a Contact
+     * @var boolean whether a reminder should be sent to attendees
      *
-     * Contact must already have been created in order to be added as an attendee.
-     *
-     * Contact presence at event is optional
      */
-    public $optional_attendee;
+    public $send_reminder;
+
 
     /**
      * Event constructor.
