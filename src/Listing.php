@@ -35,6 +35,11 @@ class Listing extends Resource {
     public $address2;
 
     /**
+     * @var boolean whether the agent created the listing
+     */
+    public $agent_created_listing;
+
+    /**
      * @var string the city of property address
      */
     public $city;
@@ -248,14 +253,33 @@ class Listing extends Resource {
      * @var array of image arrays associated with the property in the format
      *
      * [
-     *      "image_thumb_url" => "(string) url to thumbnail size image -- smallest",
-     *      "image_small_url" => "(string) url to small size image -- small",
-     *      "image_full_url" => "(string) url to medium size image -- medium",
-     *      "image_gallery_url" => "(string) url to large size image -- large",
-     *      "image_raw_url" => "(string) url to largest size image -- largest"
+     *      "thumb_url" => "(string) url to thumbnail size image -- smallest",
+     *      "small_url" => "(string) url to small size image -- small",
+     *      "full_url" => "(string) url to medium size image -- medium",
+     *      "gallery_url" => "(string) url to large size image -- large",
+     *      "raw_url" => "(string) url to largest size image -- largest"
+     *      "title" =>  (String) human readable title of image
+     *      "is_main_listing_image" =>  (Boolean) whether the image is the main image for the listing
+     *      "caption" =>  (String) human readable caption for the image
+     *      "description" =>  (String) human readable description of the image
+     *      "width" =>  (Integer) width of the raw image
+     *      "height" =>  (Integer) height of the raw image
+     *      "mime_type" =>  (String) MIME or media type of the image
      * ]
      */
     public $listing_images;
+
+    /**
+     * @var array of associative arrays with the following format
+     *
+     * [
+     *      "property_feature_name" => "(string) name of property feature"
+     *      "property_feature_values" => "(array) values for property feature"
+     * ]
+     *
+     */
+    public $property_features;
+
 
     /**
      * Listing constructor.
@@ -268,6 +292,7 @@ class Listing extends Resource {
             }
         }
     }
+
 
 
     /**
@@ -300,12 +325,12 @@ class Listing extends Resource {
      *  </code>
      * @param array $attributes
      *       <br><b>moxi_works_company_id *REQUIRED* </b> string The Moxi Works Company ID for the company in which we are searching for listings
-     *        <br><b>last_moxi_works_listing_id</b> string For multi-page responses (where the response value 'last_page' is false), send the listing ID of the last Listing in the previous page.
      *
      *       <h2>
      *     optional Task search parameters
      * </h2>
      *       <br><b>updated_since </b> integer  Unix timestamp representing the start time for the search. If no <i>updated_since</i> parameter is included in the request, only listings updated in the last seven days will be included in the response.
+     *        <br><b>last_moxi_works_listing_id</b> string For multi-page responses (where the response value 'last_page' is false), send the listing ID of the last Listing in the previous page.
      *
      * @return Listing paged response array with the format:
      *   [
