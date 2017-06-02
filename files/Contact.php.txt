@@ -568,6 +568,7 @@ class Contact extends Resource {
      *       <br><b>contact_name</b>full name of the contact
      *       <br><b>email_address</b>email address of the contact
      *       <br><b>phone_number</b>phone number of the contact
+     *       <br> <b>updated_since</b> return all Contacts updated after this Unix timestamp
      *
      *
      * @return Array of Contact objects
