@@ -120,6 +120,53 @@ class Contact extends Resource {
      */
     public $occupation;
 
+
+    /**
+     * @var boolean
+     *   Whether the contact was recently added to the Agent's database.
+     *
+     *
+     */
+    public $is_new_contact;
+
+    /**
+     * @var integer
+     *   Birthday of the contact represented as a Unix Timestamp.
+     *
+     *
+     */
+    public $birthday;
+
+    /**
+     * @var integer
+     *   Wedding anniversary of the contact represented as a Unix Timestamp.
+     *
+     *
+     */
+    public $anniversary;
+
+    /**
+     * @var home_purchase_anniversary
+     *   Anniversary of the contact's home purchase represented as a Unix Timestamp.
+     *
+     *
+     */
+    public $home_purchase_anniversary;
+
+
+    /**
+     * @var array
+     *   URLs to any social media profiles that the agent has defined.
+     *
+     * The structure of each social media profile entry will be an associative array with
+     * the following format:
+     *  { "key" => "KEY_VAL_AS_STRING", "url" => "URL_OF_SOCIAL_MEDIA_PROFILE" }
+     *
+     *
+     */
+    public $social_media_profiles;
+
+
     /**
     * @var string -- Default ''
     *   your system's unique identifier for the agent that this contact will be associated with
@@ -474,7 +521,11 @@ class Contact extends Resource {
      *      <br><b>home_neighborhood</b>  neighborhood in which this contact lives
      *      <br><b>home_country</b>  country in which this contact lives; can be abbreviation or full name
      *      <br><b>job_title</b>  the specific job title this contact has; ex  'Senior VP of Operations'
-     *      <br><b>occupation the general</b> occupation of this contact; ex  'Software Developer'
+     *      <br><b>occupation</b> the general occupation of this contact; ex  'Software Developer'
+     *      <br><b>is_new_contact</b> whether the contact was recently added to the agent's database
+     *      <br><b>birthday</b> Birthday of the contact represented as a Unix Timestamp.
+     *      <br><b>anniversary</b> Wedding of the contact represented as a Unix Timestamp.
+     *      <br><b>home_purchase_anniversary</b> Anniversary of the contact's home purchase represented as a Unix Timestamp.
      *      <br><b>note</b> Human readable comments about this contact
      *      <br><b>partner_agent_id</b>  your system's unique ID for the agent this contact is to be associated with
      *      <br><b>primary_email_address</b>  the primary email address for this contact
