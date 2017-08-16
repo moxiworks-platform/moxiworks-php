@@ -185,6 +185,11 @@ class Listing extends Resource {
     public $list_agent_full_name;
 
     /**
+     * @var string moxi works agent id of listing agent
+     */
+    public $list_agent_uuid;
+
+    /**
      * @var integer square footage of lot
      */
     public $lot_size_square_feet;
@@ -228,6 +233,11 @@ class Listing extends Resource {
      * @var integer assessment year that property_tax reflects
      */
     public $tax_year;
+
+    /**
+     * @var string moxi works agent id of secondary listing agent
+     */
+    public $secondary_list_agent_uuid;
 
     /**
      * @var boolean whether the building is one story
