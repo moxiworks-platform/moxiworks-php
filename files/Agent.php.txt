@@ -25,6 +25,21 @@ class Agent extends Resource {
     public $moxi_works_office_id;
 
     /**
+     * @var string the id of the agent used by the company of the agent
+     */
+    public $client_agent_id;
+
+    /**
+     * @var string the id office used by the company of the agent
+     */
+    public $client_office_id;
+
+    /**
+     * @var string the id of the company used by the company of the agent
+     */
+    public $client_company_id;
+
+    /**
      * @var string the agent's address, street and number
      */
     public $address_street;
