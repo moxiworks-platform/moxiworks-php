@@ -14,10 +14,21 @@ class Group extends Resource
      *   moxi_works_agent_id is the Moxi Works Platform ID of the agent which a group is
      *   associated with.
      *
-     *   this must be set for any Moxi Works Platform transaction
+     *   this or agent_uuid must be set for any Moxi Works Platform transaction
      *
      */
     public $moxi_works_agent_id;
+
+    /**
+     * @var string the Moxi Works UUID of the agent
+     *   agent_uuid is the ID of the agent which a group is
+     *   associated with.
+     *
+     *   this or moxi_works_agent_id must be set for any Moxi Works Platform transaction
+     *
+     */
+    public $agent_uuid;
+
 
     /**
      * @var string the name of the Group on the Moxi Works Platform
@@ -54,7 +65,8 @@ class Group extends Resource
      *  \MoxiworksPlatform\Group::find([moxi_works_agent_id: 'abc123', moxi_works_group_name: 'groupName'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Agent ID for the agent to which this group is to be associated
+     *       <br><b>moxi_works_agent_id *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The Moxi Works Agent ID for the agent to which this group is to be associated
+     *       <br><b>agent_uuid *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The Moxi Works Agent UUID for the agent to which this group is to be associated
      *       <br><b>moxi_works_group_name *REQUIRED* </b>The Moxi Works Group Name for this Group
      *
      *
@@ -87,7 +99,8 @@ class Group extends Resource
      *  \MoxiworksPlatform\Group::search([moxi_works_agent_id: 'abc123', moxi_works_group_name: foo])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b> string The Moxi Works Agent ID for the agent to which this group is associated
+     *       <br><b>moxi_works_agent_id *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The Moxi Works Agent ID for the agent to which this group is to be associated
+     *       <br><b>agent_uuid *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The Moxi Works Agent UUID for the agent to which this group is to be associated
      *       <br><b>name </b> string The name of the Group on Moxi Works Platform
      *
      *
@@ -102,11 +115,6 @@ class Group extends Resource
         $method = 'GET';
         $url = Config::getUrl() . "/api/groups";
         $results = array();
-
-        $required_opts = array('moxi_works_agent_id');
-
-        if (count(array_intersect(array_keys($attributes), $required_opts)) != count($required_opts))
-            throw new ArgumentException(implode(',', $required_opts) . " are required");
 
         $json = Resource::apiConnection($method, $url, $attributes);
 
@@ -135,7 +143,7 @@ class Group extends Resource
         if($url == null) {
             $url = Config::getUrl() . "/api/groups";
         }
-        $required_opts = array('moxi_works_group_name', 'moxi_works_agent_id');
+        $required_opts = array('moxi_works_group_name');
         if(count(array_intersect(array_keys($opts), $required_opts)) != count($required_opts))
             throw new ArgumentException(implode(',', $required_opts) . " are required");
         $group = null;
