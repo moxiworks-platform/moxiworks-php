@@ -101,7 +101,7 @@ class Credentials
      *
      * @return string
      */
-    public function getIdentifier() {
+    public static function getIdentifier() {
         return Credentials::$identifier;
     }
 
@@ -110,7 +110,7 @@ class Credentials
      *
      * @return string
      */
-    public function getSecret() {
+    public static function getSecret() {
         return Credentials::$secret;
     }
 
