@@ -180,6 +180,7 @@ class Agent extends Resource {
      *  </code>
      * @param array $attributes
      *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Agent ID for the agent
+     *       <br><b>agent_uuid *REQUIRED* </b>The Moxi Works UUID for the agent -- either
      *
      *
      * @return Agent|null
@@ -188,7 +189,10 @@ class Agent extends Resource {
      * @throws RemoteRequestFailureException
      */
     public static function find($attributes=[]) {
-        $url = Config::getUrl() . "/api/agents/" . $attributes['moxi_works_agent_id'];
+        $agent_identifier = $attributes['agent_uuid'] ? : $attributes['moxi_works_agent_id'];
+        if(!$agent_identifier)
+            throw new ArgumentException("either agent_uuid or moxi_works_agent_id is required");
+        $url = Config::getUrl() . "/api/agents/" . $agent_identifier;
         return Agent::sendRequest('GET', $attributes, $url);
     }
 
@@ -256,7 +260,7 @@ class Agent extends Resource {
         if($url == null) {
             $url = Config::getUrl() . "/api/agents";
         }
-        $required_opts = array('moxi_works_agent_id', 'moxi_works_company_id');
+        $required_opts = array('moxi_works_company_id');
         if(count(array_intersect(array_keys($opts), $required_opts)) != count($required_opts))
             throw new ArgumentException(implode(',', $required_opts) . " required");
         $agent = null;
