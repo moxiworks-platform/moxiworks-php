@@ -9,10 +9,10 @@ use MoxiworksPlatform\Exception\InvalidResponseException;
 use Symfony\Component\Translation\Tests\StringClass;
 
 
-class Listing extends Resource {
+class SoldListing extends Resource {
     /**
-     * @var string the Moxi Works Platform ID of the listing
-     *   moxi_works_listing_id is the Moxi Works Platform ID of the listing
+     * @var string the Moxi Works Platform ID of the SoldListing
+     *   moxi_works_listing_id is the Moxi Works Platform ID of the SoldListing
      *
      *   this must be set for any Moxi Works Platform transaction
      *
@@ -20,12 +20,12 @@ class Listing extends Resource {
     public $moxi_works_listing_id;
 
     /**
-     * @var float the property acreage of the listing
+     * @var float the property acreage of the SoldListing
      */
     public $lot_size_acres;
 
     /**
-     * @var string the street address of the listing
+     * @var string the street address of the SoldListing
      */
     public $address;
 
@@ -35,7 +35,7 @@ class Listing extends Resource {
     public $address2;
 
     /**
-     * @var boolean whether the agent created the listing
+     * @var boolean whether the agent created the SoldListing
      */
     public $agent_created_listing;
 
@@ -125,7 +125,7 @@ class Listing extends Resource {
     public $internet_address_display_yn;
 
     /**
-     * @var integer number of days the listing has been on market
+     * @var integer number of days the SoldListing has been on market
      */
     public $days_on_market;
 
@@ -165,7 +165,7 @@ class Listing extends Resource {
     public $association_fee;
 
     /**
-     * @var string name of office responsible for listing
+     * @var string name of office responsible for SoldListing
      */
     public $list_office_name;
 
@@ -175,17 +175,17 @@ class Listing extends Resource {
     public $list_price;
 
     /**
-     * @var string mls number for the listing
+     * @var string mls number for the SoldListing
      */
     public $listing_id;
 
     /**
-     * @var string name of listing agent
+     * @var string name of SoldListing agent
      */
     public $list_agent_full_name;
 
     /**
-     * @var string moxi works agent id of listing agent
+     * @var string moxi works agent id of SoldListing agent
      */
     public $list_agent_uuid;
 
@@ -200,17 +200,17 @@ class Listing extends Resource {
     public $middle_or_junior_school;
 
     /**
-     * @var string MLS the listing is listed with
+     * @var string MLS the SoldListing is listed with
      */
     public $list_office_aor;
 
     /**
-     * @var boolean whether to display the listing on the internet
+     * @var boolean whether to display the SoldListing on the internet
      */
     public $internet_entire_listing_display_yn;
 
     /**
-     * @var boolean whether the listing is on market
+     * @var boolean whether the SoldListing is on market
      */
     public $on_market;
 
@@ -235,7 +235,7 @@ class Listing extends Resource {
     public $tax_year;
 
     /**
-     * @var string moxi works agent id of secondary listing agent
+     * @var string moxi works agent id of secondary SoldListing agent
      */
     public $secondary_list_agent_uuid;
 
@@ -260,6 +260,21 @@ class Listing extends Resource {
     public $year_built;
 
     /**
+     * @var string representing the date the listing was sold
+     */
+    public $sold_date;
+
+    /**
+     * @var integer price listing sold for
+     */
+    public $sold_price;
+
+
+
+
+
+
+    /**
      * @var array of image arrays associated with the property in the format
      *
      * [
@@ -269,8 +284,7 @@ class Listing extends Resource {
      *      "gallery_url" => "(string) url to large size image -- large",
      *      "raw_url" => "(string) url to largest size image -- largest"
      *      "title" =>  (String) human readable title of image
-     *      "is_main_listing_image" =>  (Boolean) whether the image is the main image for the listing
-     *      "embedded_html_content" => (String) Embedded HTML that can be placed into a webpage – this will be used for embedded movies.
+     *      "is_main_listing_image" =>  (Boolean) whether the image is the main image for the SoldListing
      *      "caption" =>  (String) human readable caption for the image
      *      "description" =>  (String) human readable description of the image
      *      "width" =>  (Integer) width of the raw image
@@ -291,9 +305,21 @@ class Listing extends Resource {
      */
     public $property_features;
 
+    /**
+     * @var array of associative arrays with the following format
+     *
+     * [
+     *      "date" => "(string) string representing date of open house"
+     *      "start_time" => "string representing start time of open house"
+     *      "end_time" => "string representing end time of open house"
+     * ]
+     *
+     */
+    public $open_house;
+
 
     /**
-     * Listing constructor.
+     * SoldListing constructor.
      * @param array $data
      */
     function __construct(array $data) {
@@ -307,46 +333,46 @@ class Listing extends Resource {
 
 
     /**
-     * Find a Listing on Moxi Works Platform.
+     * Find a SoldListing on Moxi Works Platform.
      *
-     * find can be performed including the Moxi Works Listing ID in a parameter array
+     * find can be performed including the Moxi Works SoldListing ID in a parameter array
      *  <code>
-     *  \MoxiworksPlatform\Listing::find([moxi_works_listing_id: 'abc123'])
+     *  \MoxiworksPlatform\SoldListing::find([moxi_works_listing_id: 'abc123'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_listing_id *REQUIRED* </b>The Moxi Works Listing ID for the listing
+     *       <br><b>moxi_works_listing_id *REQUIRED* </b>The Moxi Works SoldListing ID for the SoldListing
      *
      *
-     * @return Listing|null
+     * @return SoldListing|null
      *
      * @throws ArgumentException if required parameters are not included
      * @throws RemoteRequestFailureException
      */
     public static function find($attributes=[]) {
-        $url = Config::getUrl() . "/api/listings/" . $attributes['moxi_works_listing_id'];
-        return Listing::sendRequest('GET', $attributes, $url);
+        $url = Config::getUrl() . "/api/sold_listings/" . $attributes['moxi_works_listing_id'];
+        return SoldListing::sendRequest('GET', $attributes, $url);
     }
 
     /**
-     * Search for Listings by Company on Moxi Works Platform.
+     * Search for SoldListings by Company on Moxi Works Platform.
      *
-     * search can be performed by including moxi_works_company_id and updated_since in a parameter array
+     * search can be performed by including moxi_works_company_id and sold_since in a parameter array
      *  <code>
-     *  \MoxiworksPlatform\Listing::search([moxi_works_company_id: 'abc123', updated_since: 1463595006])
+     *  \MoxiworksPlatform\SoldListing::search([moxi_works_company_id: 'abc123', sold_since: 1463595006])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_company_id *REQUIRED* </b> string The Moxi Works Company ID for the company in which we are searching for listings
+     *       <br><b>moxi_works_company_id *REQUIRED* </b> string The Moxi Works Company ID for the company in which we are searching for SoldListings
      *
      *       <h2>
      *     optional Task search parameters
      * </h2>
-     *       <br><b>updated_since </b> integer  Unix timestamp representing the start time for the search. If no <i>updated_since</i> parameter is included in the request, only listings updated in the last seven days will be included in the response.
-     *        <br><b>last_moxi_works_listing_id</b> string For multi-page responses (where the response value 'last_page' is false), send the listing ID of the last Listing in the previous page.
+     *       <br><b>sold_since </b> integer  Unix timestamp representing the start time for the search. If no <i>sold_since</i> parameter is included in the request, only SoldListings updated in the last seven days will be included in the response.
+     *        <br><b>last_moxi_works_listing_id</b> string For multi-page responses (where the response value 'last_page' is false), send the SoldListing ID of the last SoldListing in the previous page.
      *
-     * @return Listing paged response array with the format:
+     * @return SoldListing paged response array with the format:
      *   [
      *     final_page: [Boolean],
-     *     listings:  [Array] containing MoxiworkPlatform\Listing objects
+     *     SoldListings:  [Array] containing MoxiworkPlatform\Listing objects
      *   ]
      *
      * @throws ArgumentException if required parameters are not included
@@ -355,7 +381,7 @@ class Listing extends Resource {
      */
     public static function search($attributes=[]) {
         $method = 'GET';
-        $url = Config::getUrl() . "/api/listings";
+        $url = Config::getUrl() . "/api/sold_listings";
         $listings = array();
 
         $required_opts = array('moxi_works_company_id');
@@ -367,9 +393,9 @@ class Listing extends Resource {
 
         if(!isset($json) || empty($json))
             return null;
-        $json = Listing::underscoreAttributeNames($json);
+        $json = SoldListing::underscoreAttributeNames($json);
         foreach ($json['listings'] as $c) {
-            $listing = new Listing($c);
+            $listing = new SoldListing($c);
             array_push($listings, $listing);
         }
         $json['listings'] = $listings;
@@ -382,22 +408,22 @@ class Listing extends Resource {
      * @param array $opts
      * @param null $url
      *
-     * @return Listing|null
+     * @return SoldListing|null
      *
      * @throws ArgumentException if required parameters are not included
      * @throws RemoteRequestFailureException
      */
     private static function sendRequest($method, $opts=[], $url=null) {
         if($url == null) {
-            $url = Config::getUrl() . "/api/listings";
+            $url = Config::getUrl() . "/api/sold_listings";
         }
         $required_opts = array('moxi_works_listing_id', 'moxi_works_company_id');
         if(count(array_intersect(array_keys($opts), $required_opts)) != count($required_opts))
             throw new ArgumentException(implode(',', $required_opts) . " required");
         $listing = null;
         $json = Resource::apiConnection($method, $url, $opts);
-        $json = Listing::underscoreAttributeNames($json);
-        $listing = (!isset($json) || empty($json)) ? null : new Listing($json);
+        $json = SoldListing::underscoreAttributeNames($json);
+        $listing = (!isset($json) || empty($json)) ? null : new SoldListing($json);
         return $listing;
     }
 
@@ -405,7 +431,7 @@ class Listing extends Resource {
         $keys = array_keys($array);
         foreach($keys as $key) {
             if(is_array($array[$key])) {
-                $array[$key] = Listing::underscoreAttributeNames($array[$key]);
+                $array[$key] = SoldListing::underscoreAttributeNames($array[$key]);
             }
             if(is_string($key)) {
                 $underscored = Resource::underscore($key);

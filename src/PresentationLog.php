@@ -88,6 +88,11 @@ class PresentationLog extends Resource {
      */
     public $external_office_id;
 
+    /**
+     * @var string The unique UUID of the presentation. This will be an RFC 4122 compliant UUID.
+     */
+    public $moxi_works_presentation_id;
+
 
     /**
      * PresentationLog constructor.
@@ -117,6 +122,9 @@ class PresentationLog extends Resource {
      *       <br><b>updated_before </b> integer  Unix timestamp representing the end time for the search. If no <i>updated_before</i> parameter is included in the request, only presentations updated in the seven days following <i>updated_after</i> will be included in the response.
      *       <br><b>created_after </b> integer  Unix timestamp representing the start time for the search.
      *       <br><b>created_before </b> integer  Unix timestamp representing the end time for the search. If no <i>created_before</i> parameter is included in the request, only presentations updated in the seven days following <i>created_after</i> will be included in the response.
+     *
+     * Note: only updated_after and <b>updated_before</b> <b>or</b>
+     *  <b>created_after</b> and <b>created_before</b> can be used when searching.
      *
      *
      * @return Array paged response array with the format:

@@ -1,0 +1,5 @@
+build/*
+notes.txt
+composer.phar
+phpDocumentor.phar
+
