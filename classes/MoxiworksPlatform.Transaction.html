@@ -21,54 +21,54 @@
     <script src="../js/jquery.smooth-scroll.js"></script>
     <script src="../js/prism.min.js"></script>
     <!-- TODO: Add http://jscrollpane.kelvinluck.com/ to style the scrollbars for browsers not using webkit-->
-        <script type="text/javascript">
-        function loadExternalCodeSnippets() {
-            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
-                var src = pre.getAttribute('data-src');
-                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
-                var language = 'php';
+    <script type="text/javascript">
+    function loadExternalCodeSnippets() {
+        Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach(function (pre) {
+            var src = pre.getAttribute('data-src');
+            var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+            var language = 'php';
 
-                var code = document.createElement('code');
-                code.className = 'language-' + language;
+            var code = document.createElement('code');
+            code.className = 'language-' + language;
 
-                pre.textContent = '';
+            pre.textContent = '';
 
-                code.textContent = 'Loading…';
+            code.textContent = 'Loading…';
 
-                pre.appendChild(code);
+            pre.appendChild(code);
 
-                var xhr = new XMLHttpRequest();
+            var xhr = new XMLHttpRequest();
 
-                xhr.open('GET', src, true);
+            xhr.open('GET', src, true);
 
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState == 4) {
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
 
-                        if (xhr.status < 400 && xhr.responseText) {
-                            code.textContent = xhr.responseText;
+                    if (xhr.status < 400 && xhr.responseText) {
+                        code.textContent = xhr.responseText;
 
-                            Prism.highlightElement(code);
-                        }
-                        else if (xhr.status >= 400) {
-                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
-                        }
-                        else {
-                            code.textContent = '✖ Error: File does not exist or is empty';
-                        }
+                        Prism.highlightElement(code);
                     }
-                };
+                    else if (xhr.status >= 400) {
+                        code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                    }
+                    else {
+                        code.textContent = '✖ Error: File does not exist or is empty';
+                    }
+                }
+            };
 
-                xhr.send(null);
-            });
-        }
-
-        $(document).ready(function(){
-            loadExternalCodeSnippets();
+            xhr.send(null);
         });
-        $('#source-view').on('shown', function () {
-            loadExternalCodeSnippets();
-        })
-    </script>
+    }
+
+    $(document).ready(function(){
+        loadExternalCodeSnippets();
+    });
+    $('#source-view').on('shown', function () {
+        loadExternalCodeSnippets();
+    })
+</script>
 
     <link rel="shortcut icon" href="../images/favicon.ico"/>
     <link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
@@ -144,28 +144,28 @@
                                 <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-1450690404"></a>
+                                    <a class="accordion-toggle " data-toggle="collapse" data-target="#namespace-989142642"></a>
                                 <a href="../namespaces/default.html" style="margin-left: 30px; padding-left: 0">\</a>
             </div>
-            <div id="namespace-1450690404" class="accordion-body collapse in">
+            <div id="namespace-989142642" class="accordion-body collapse in">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1257968587"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1615100589"></a>
                                 <a href="../namespaces/MoxiworksPlatform.html" style="margin-left: 30px; padding-left: 0">MoxiworksPlatform</a>
             </div>
-            <div id="namespace-1257968587" class="accordion-body collapse ">
+            <div id="namespace-1615100589" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                                                     <div class="accordion" style="margin-bottom: 0">
         <div class="accordion-group">
             <div class="accordion-heading">
-                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-1516614308"></a>
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-target="#namespace-514422399"></a>
                                 <a href="../namespaces/MoxiworksPlatform.Exception.html" style="margin-left: 30px; padding-left: 0">Exception</a>
             </div>
-            <div id="namespace-1516614308" class="accordion-body collapse ">
+            <div id="namespace-514422399" class="accordion-body collapse ">
                 <div class="accordion-inner">
 
                     
@@ -223,53 +223,102 @@
     <section class="row-fluid">
         <div class="span10 offset2">
             <div class="row-fluid">
-                <div class="span8 content file">
+                <div class="span8 content class">
                     <nav>
-                                                                    </nav>
-
+                                                <a href="../namespaces/MoxiworksPlatform.html">\MoxiworksPlatform</a> <i class="icon-level-up"></i>
+                                            </nav>
                     <a href="#source-view" role="button" class="pull-right btn" data-toggle="modal"><i class="icon-code"></i></a>
-                    <h1><small></small>Agent.php</h1>
+
+                    <h1><small>\MoxiworksPlatform</small>Transaction</h1>
                     <p><em></em></p>
                     
-
                     
-                    
-                                        <h2>Classes</h2>
-                    <table class="table table-hover">
-                                            <tr>
-                            <td><a href="../classes/MoxiworksPlatform.Agent.html">Agent</a></td>
-                            <td><em></em></td>
-                        </tr>
-                                        </table>
-                                    </div>
-
+                                        
+                    <section id="summary">
+                        <h2>Summary</h2>
+                        <section class="row-fluid heading">
+                            <section class="span4">
+                                <a href="#methods">Methods</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#properties">Properties</a>
+                            </section>
+                            <section class="span4">
+                                <a href="#constants">Constants</a>
+                            </section>
+                        </section>
+                        <section class="row-fluid public">
+                            <section class="span4">
+                                                                    <em>No public methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No public properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No constants found</em>
+                                                            </section>
+                        </section>
+                        <section class="row-fluid protected">
+                            <section class="span4">
+                                                                    <em>No protected methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No protected properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                        <section class="row-fluid private">
+                            <section class="span4">
+                                                                    <em>No private methods found</em>
+                                                            </section>
+                            <section class="span4">
+                                                                    <em>No private properties found</em>
+                                                            </section>
+                            <section class="span4">
+                                <em>N/A</em>
+                            </section>
+                        </section>
+                    </section>
+                </div>
                 <aside class="span4 detailsbar">
+                                        
+                    
                     <dl>
-                                                    <dt>Package</dt>
-                            <dd><div class="namespace-wrapper">\Default</div></dd>
+                        <dt>File</dt>
+                            <dd><a href="../files/Transaction.html"><div class="path-wrapper">Transaction.php</div></a></dd>
+                                                <dt>Package</dt>
+                            <dd><div class="namespace-wrapper">Default</div></dd>
+                                                <dt>Class hierarchy</dt>
+                            <dd class="hierarchy">
+                                                                                                                                                                    <div class="namespace-wrapper">\MoxiworksPlatform\Transaction</div>
+                            </dd>
+
                         
                         
-                    </dl>
+                        
+                        
+                                                                        </dl>
                     <h2>Tags</h2>
                     <table class="table table-condensed">
-                                                    <tr><td colspan="2"><em>None found</em></td></tr>
-                                            </table>
-
+                                            <tr><td colspan="2"><em>None found</em></td></tr>
+                                        </table>
                 </aside>
             </div>
 
-            
-            
-        </div>
+                        
+                        
+                                </div>
     </section>
 
     <div id="source-view" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="source-view-label" aria-hidden="true">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="source-view-label"></h3>
+            <h3 id="source-view-label">Transaction.php</h3>
         </div>
         <div class="modal-body">
-            <pre data-src="../files/Agent.php.txt" class="language-php line-numbers"></pre>
+            <pre data-src="../files/Transaction.php.txt" class="language-php line-numbers"></pre>
         </div>
     </div>
 
@@ -328,20 +377,20 @@ Call Stack:
     1.5375   32254424  12. call_user_func_array:{phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Console/Output/Output.php:59}() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Console/Output/Output.php:59
     1.5375   32255000  13. phpDocumentor\Transformer\Transformer->execute() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Console/Output/Output.php:59
     1.5386   32276584  14. phpDocumentor\Transformer\Transformer->transformProject() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Transformer/Transformer.php:141
-    3.8143   34558288  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Transformer/Transformer.php:275
-    3.8144   34558544  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Transformer/Transformer.php:312
-    3.9112   33674880  17. Twig_Environment->render() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
-    3.9116   33688480  18. Twig_Template->render() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Environment.php:293
-    3.9116   33705104  19. Twig_Template->display() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:274
-    3.9117   33706472  20. Twig_Template->displayWithErrorHandling() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:263
-    3.9117   33706472  21. __TwigTemplate_400c613d50600d1e1e3fda7b9acebc186d196f9e2ac756a33c4fd160c4890bb3->doDisplay() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:289
-    3.9117   33706888  22. Twig_Template->display() /private/var/folders/4x/9k56yqpx0blf2nl1vdxvzhzh0000gq/T/phpdoc-twig-cache/40/0c/613d50600d1e1e3fda7b9acebc186d196f9e2ac756a33c4fd160c4890bb3.php:33
-    3.9117   33707904  23. Twig_Template->displayWithErrorHandling() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:263
-    3.9117   33707904  24. __TwigTemplate_af7d17fc0e3bb6810baab83028b6bdc43124e5d74bda66c9aa0cdfd186716790->doDisplay() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:289
-    3.9389   33842808  25. twig_date_format_filter() /private/var/folders/4x/9k56yqpx0blf2nl1vdxvzhzh0000gq/T/phpdoc-twig-cache/af/7d/17fc0e3bb6810baab83028b6bdc43124e5d74bda66c9aa0cdfd186716790.php:383
-    3.9389   33842856  26. twig_date_converter() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php:465
-    3.9389   33842856  27. Twig_Extension_Core->getTimezone() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php:512
-    3.9389   33843040  28. date_default_timezone_get() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php:89
+    2.0218   34583576  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Transformer/Transformer.php:275
+    2.0220   34583832  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Transformer/Transformer.php:312
+    3.7825   34504304  17. Twig_Environment->render() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
+    3.7830   34518832  18. Twig_Template->render() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Environment.php:293
+    3.7830   34535456  19. Twig_Template->display() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:274
+    3.7830   34536960  20. Twig_Template->displayWithErrorHandling() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:263
+    3.7830   34536960  21. __TwigTemplate_d5c695b008fc9644b271253abdf3efcc9fc22b2fb9bf85b888949e2dc07872de->doDisplay() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:289
+    3.7830   34537504  22. Twig_Template->display() /private/var/folders/4x/9k56yqpx0blf2nl1vdxvzhzh0000gq/T/phpdoc-twig-cache/d5/c6/95b008fc9644b271253abdf3efcc9fc22b2fb9bf85b888949e2dc07872de.php:34
+    3.7830   34538696  23. Twig_Template->displayWithErrorHandling() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:263
+    3.7830   34538696  24. __TwigTemplate_af7d17fc0e3bb6810baab83028b6bdc43124e5d74bda66c9aa0cdfd186716790->doDisplay() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:289
+    3.8123   34678664  25. twig_date_format_filter() /private/var/folders/4x/9k56yqpx0blf2nl1vdxvzhzh0000gq/T/phpdoc-twig-cache/af/7d/17fc0e3bb6810baab83028b6bdc43124e5d74bda66c9aa0cdfd186716790.php:383
+    3.8123   34678712  26. twig_date_converter() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php:465
+    3.8123   34678712  27. Twig_Extension_Core->getTimezone() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php:512
+    3.8123   34678896  28. date_default_timezone_get() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php:89
 
 January 18th, 2018 at 17:33.
                 </section>

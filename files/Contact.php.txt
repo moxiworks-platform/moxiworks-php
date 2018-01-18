@@ -604,7 +604,8 @@ class Contact extends Resource {
      * @throws RemoteRequestFailureException
      */
     public static function find($attributes=[]) {
-        return Contact::sendRequest('GET', $attributes);
+        $url = Config::getUrl() . "/api/contacts/" . $attributes['partner_contact_id'];
+        return Contact::sendRequest('GET', $attributes, $url);
     }
 
     /**
