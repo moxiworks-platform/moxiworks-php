@@ -160,6 +160,12 @@ class Agent extends Resource {
     public $title;
 
     /**
+     * @var string uuid -- uuid of the agent
+     */
+    public $uuid;
+
+
+    /**
      * Agent constructor.
      * @param array $data
      */

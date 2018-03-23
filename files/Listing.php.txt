@@ -291,6 +291,24 @@ class Listing extends Resource {
      */
     public $property_features;
 
+    /**
+     * @var array Company specific attributes associated with the listing.
+     *  These will be defined by the company & should not be expected to be
+     *   uniform across companies.
+     */
+    public $company_listing_attributes;
+
+    /**
+     * @string Details URL for this listing.
+     */
+    public $listing_url;
+
+
+    /**
+     * @var string Detailed status of the listing; whether it’s active pending
+     */
+    public $status;
+
 
     /**
      * Listing constructor.
