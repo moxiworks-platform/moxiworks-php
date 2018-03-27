@@ -155,36 +155,36 @@
 Warning: date_default_timezone_get(): It is not safe to rely on the system's timezone settings. You are *required* to use the date.timezone setting or the date_default_timezone_set() function. In case you used any of those methods and you are still getting this warning, you most likely misspelled the timezone identifier. We selected the timezone 'UTC' for now, but please set date.timezone to select your timezone. in phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php on line 89
 
 Call Stack:
-    0.0554    1863160   1. {main}() /Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar:0
-    0.0564    1859376   2. require('phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/bin/phpdoc') /Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar:10
-    0.1694   13149072   3. phpDocumentor\Application->run() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/bin/phpdoc:23
-    0.1715   13406704   4. Symfony\Component\Console\Application->run() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Application.php:183
-    0.1717   13407640   5. Symfony\Component\Console\Application->doRun() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/symfony/console/Symfony/Component/Console/Application.php:126
-    0.1719   13408560   6. Symfony\Component\Console\Application->doRunCommand() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/symfony/console/Symfony/Component/Console/Application.php:195
-    0.1720   13409032   7. Symfony\Component\Console\Command\Command->run() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/symfony/console/Symfony/Component/Console/Application.php:874
-    0.1724   13415064   8. phpDocumentor\Command\Project\RunCommand->execute() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/symfony/console/Symfony/Component/Console/Command/Command.php:253
-    1.4996   28271480   9. Symfony\Component\Console\Command\Command->run() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Command/Project/RunCommand.php:275
-    1.4999   28274952  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/symfony/console/Symfony/Component/Console/Command/Command.php:253
-    1.6754   32300872  11. phpDocumentor\Console\Output\Output->writeTimedLog() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
-    1.6755   32300968  12. call_user_func_array:{phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Console/Output/Output.php:59}() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Console/Output/Output.php:59
-    1.6755   32301544  13. phpDocumentor\Transformer\Transformer->execute() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Console/Output/Output.php:59
-    1.6767   32323088  14. phpDocumentor\Transformer\Transformer->transformProject() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Transformer/Transformer.php:141
-    5.1981   33895624  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Transformer/Transformer.php:275
-    5.1983   33895880  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Transformer/Transformer.php:312
-    5.1985   33901352  17. Twig_Environment->render() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
-    5.2487   34413728  18. Twig_Template->render() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Environment.php:293
-    5.2487   34430440  19. Twig_Template->display() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:274
-    5.2489   34432008  20. Twig_Template->displayWithErrorHandling() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:263
-    5.2489   34432080  21. __TwigTemplate_3adaed4e8cffee3a5d68881f7204fcc5bb2eb02b1502244443909ca1d93faa18->doDisplay() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:289
-    5.2489   34432488  22. Twig_Template->display() /private/var/folders/4x/9k56yqpx0blf2nl1vdxvzhzh0000gq/T/phpdoc-twig-cache/3a/da/ed4e8cffee3a5d68881f7204fcc5bb2eb02b1502244443909ca1d93faa18.php:33
-    5.2489   34433504  23. Twig_Template->displayWithErrorHandling() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:263
-    5.2489   34433504  24. __TwigTemplate_af7d17fc0e3bb6810baab83028b6bdc43124e5d74bda66c9aa0cdfd186716790->doDisplay() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:289
-    5.2982   34437664  25. twig_date_format_filter() /private/var/folders/4x/9k56yqpx0blf2nl1vdxvzhzh0000gq/T/phpdoc-twig-cache/af/7d/17fc0e3bb6810baab83028b6bdc43124e5d74bda66c9aa0cdfd186716790.php:383
-    5.2982   34437712  26. twig_date_converter() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php:465
-    5.2982   34437712  27. Twig_Extension_Core->getTimezone() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php:512
-    5.2982   34437896  28. date_default_timezone_get() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php:89
+    0.0514    1863160   1. {main}() /Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar:0
+    0.0524    1859376   2. require('phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/bin/phpdoc') /Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar:10
+    0.1641   13149072   3. phpDocumentor\Application->run() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/bin/phpdoc:23
+    0.1663   13406704   4. Symfony\Component\Console\Application->run() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Application.php:183
+    0.1664   13407640   5. Symfony\Component\Console\Application->doRun() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/symfony/console/Symfony/Component/Console/Application.php:126
+    0.1666   13408560   6. Symfony\Component\Console\Application->doRunCommand() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/symfony/console/Symfony/Component/Console/Application.php:195
+    0.1666   13409032   7. Symfony\Component\Console\Command\Command->run() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/symfony/console/Symfony/Component/Console/Application.php:874
+    0.1670   13415064   8. phpDocumentor\Command\Project\RunCommand->execute() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/symfony/console/Symfony/Component/Console/Command/Command.php:253
+    1.4894   28303248   9. Symfony\Component\Console\Command\Command->run() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Command/Project/RunCommand.php:275
+    1.4897   28306736  10. phpDocumentor\Transformer\Command\Project\TransformCommand->execute() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/symfony/console/Symfony/Component/Console/Command/Command.php:253
+    1.6610   32327296  11. phpDocumentor\Console\Output\Output->writeTimedLog() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Transformer/Command/Project/TransformCommand.php:206
+    1.6611   32327392  12. call_user_func_array:{phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Console/Output/Output.php:59}() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Console/Output/Output.php:59
+    1.6611   32327968  13. phpDocumentor\Transformer\Transformer->execute() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Console/Output/Output.php:59
+    1.6627   32349512  14. phpDocumentor\Transformer\Transformer->transformProject() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Transformer/Transformer.php:141
+    5.2015   33920880  15. phpDocumentor\Transformer\Transformer->applyTransformationToProject() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Transformer/Transformer.php:275
+    5.2017   33921136  16. phpDocumentor\Plugin\Twig\Writer\Twig->transform() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Transformer/Transformer.php:312
+    5.2019   33926624  17. Twig_Environment->render() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/src/phpDocumentor/Plugin/Twig/Writer/Twig.php:116
+    5.2370   34437728  18. Twig_Template->render() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Environment.php:293
+    5.2370   34454456  19. Twig_Template->display() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:274
+    5.2371   34456016  20. Twig_Template->displayWithErrorHandling() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:263
+    5.2371   34456088  21. __TwigTemplate_3adaed4e8cffee3a5d68881f7204fcc5bb2eb02b1502244443909ca1d93faa18->doDisplay() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:289
+    5.2371   34456504  22. Twig_Template->display() /private/var/folders/4x/9k56yqpx0blf2nl1vdxvzhzh0000gq/T/phpdoc-twig-cache/3a/da/ed4e8cffee3a5d68881f7204fcc5bb2eb02b1502244443909ca1d93faa18.php:33
+    5.2371   34457528  23. Twig_Template->displayWithErrorHandling() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:263
+    5.2371   34457528  24. __TwigTemplate_af7d17fc0e3bb6810baab83028b6bdc43124e5d74bda66c9aa0cdfd186716790->doDisplay() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Template.php:289
+    5.2743   34461656  25. twig_date_format_filter() /private/var/folders/4x/9k56yqpx0blf2nl1vdxvzhzh0000gq/T/phpdoc-twig-cache/af/7d/17fc0e3bb6810baab83028b6bdc43124e5d74bda66c9aa0cdfd186716790.php:383
+    5.2743   34461712  26. twig_date_converter() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php:465
+    5.2743   34461712  27. Twig_Extension_Core->getTimezone() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php:512
+    5.2743   34461928  28. date_default_timezone_get() phar:///Users/tres/work/moxiworks-platform/php/moxiworks_platform/phpDocumentor.phar/vendor/twig/twig/lib/Twig/Extension/Core.php:89
 
-March 23rd, 2018 at 21:41.
+March 27th, 2018 at 22:04.
                 </section>
             </section>
         </section>
