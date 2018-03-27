@@ -240,6 +240,11 @@ class Listing extends Resource {
     public $secondary_list_agent_uuid;
 
     /**
+     * @var string If there is a second listing agent, the name of the second listing agent.
+     */
+    public $secondary_list_agent_full_name;
+
+    /**
      * @var boolean whether the building is one story
      */
     public $single_story;
@@ -260,7 +265,19 @@ class Listing extends Resource {
     public $year_built;
 
     /**
-     * @var array of image arrays associated with the property in the format
+     * @var array open house arrays associated with the listing in the format
+     *
+     *  [
+     *      "date" => "(string) YYYY-MM-DD formatted string representing the date of the open house"
+     *      "start_time" => "(string) HH:MM:SS formatted string representing the time when the open house starts. This is expressed in the local time where the listing is located."
+     *      "end_time" => "(string) HH:MM:SS formatted string representing the time when the open house ends. This is expressed in the local time where the listing is located."
+     *  ]
+     *
+     */
+    public $open_house;
+
+    /**
+     * @var array of image associative arrays associated with the listing in the format
      *
      * [
      *      "thumb_url" => "(string) url to thumbnail size image -- smallest",
@@ -308,6 +325,11 @@ class Listing extends Resource {
      * @var string Detailed status of the listing; whether it’s active pending
      */
     public $status;
+
+    /**
+     * @var string Virtual tour URL for this listing.
+     */
+    public $virtual_tour_url;
 
 
     /**
