@@ -269,7 +269,17 @@ class SoldListing extends Resource {
      */
     public $sold_price;
 
+    /**
+     * @var string Title of this listing
+     */
+    public $title;
 
+    /**
+     * @var array Company specific attributes associated with the listing.
+     *  These will be defined by the company & should not be expected to be
+     *   uniform across companies.
+     */
+    public $company_listing_attributes;
 
 
 

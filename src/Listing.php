@@ -331,6 +331,10 @@ class Listing extends Resource {
      */
     public $virtual_tour_url;
 
+    /**
+     * @var string Title of this listing
+     */
+    public $title;
 
     /**
      * Listing constructor.
