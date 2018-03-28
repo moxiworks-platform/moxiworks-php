@@ -92,6 +92,10 @@ class Office extends Resource {
      */
     public $twitter;
 
+    /**
+     * @var string URL of the office website
+     */
+    public $office_website;
 
     /**
      * Office constructor.
