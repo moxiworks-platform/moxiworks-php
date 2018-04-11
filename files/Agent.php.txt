@@ -164,6 +164,11 @@ class Agent extends Resource {
      */
     public $uuid;
 
+    /**
+     * @var boolean has_engage_access -- whether the agent has access to MoxiWorks Engage
+     */
+    public $has_engage_access;
+
 
     /**
      * Agent constructor.
