@@ -341,6 +341,11 @@ class Listing extends Resource {
      */
     public $list_agent_moxi_works_office_id;
 
+    /**
+     * @var string list_agent_office_id -- office ID of the listing agent
+     */
+    public $list_agent_office_id;
+
 
     /**
      * Listing constructor.
