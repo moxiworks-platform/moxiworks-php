@@ -171,6 +171,13 @@ class Agent extends Resource {
 
 
     /**
+     * @var Array available_mls -- available MLSs for this agent
+     */
+    public $available_mls;
+
+
+
+    /**
      * Agent constructor.
      * @param array $data
      */
