@@ -6,6 +6,7 @@ namespace MoxiworksPlatform;
 use GuzzleHttp\Tests\Psr7\Str;
 use MoxiworksPlatform\Exception\ArgumentException;
 use MoxiworksPlatform\Exception\InvalidResponseException;
+use phpDocumentor\Reflection\Types\Integer;
 use Symfony\Component\Translation\Tests\StringClass;
 
 
@@ -174,6 +175,35 @@ class Agent extends Resource {
      * @var Array available_mls -- available MLSs for this agent
      */
     public $available_mls;
+
+
+    /**
+     * @var Array alternate_offices -- alternate offices for this agent
+     */
+    public $alternate_offices;
+
+    /**
+     * @var Integer gci_goal -- GCI goal for this agent
+     */
+    public $gci_goal;
+
+
+    /**
+     * @var String region -- region for this agent
+     */
+    public $region;
+
+
+    /**
+     * @var Float buyer_commission_rate -- buyer commission rate for this agent
+     */
+    public $buyer_commission_rate;
+
+
+    /**
+     * @var Float seller_commission_rate -- seller commission rate for this agent
+     */
+    public $seller_commission_rate;
 
 
 
