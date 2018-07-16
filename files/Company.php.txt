@@ -6,6 +6,7 @@ namespace MoxiworksPlatform;
 use GuzzleHttp\Tests\Psr7\Str;
 use MoxiworksPlatform\Exception\ArgumentException;
 use MoxiworksPlatform\Exception\InvalidResponseException;
+use phpDocumentor\Reflection\Types\Array_;
 use Symfony\Component\Translation\Tests\StringClass;
 
 
@@ -24,6 +25,14 @@ class Company {
      *
      */
     public $name;
+
+
+    /**
+     * @var Array partner data associated with the company
+     *
+     *
+     */
+    public $partners;
 
     /**
      * Company constructor.
