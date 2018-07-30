@@ -281,7 +281,15 @@ class SoldListing extends Resource {
      */
     public $company_listing_attributes;
 
+    /**
+     * @string Details URL for this listing.
+     */
+    public $listing_url;
 
+    /**
+     * @var string Detailed status of the listing; whether it’s active pending
+     */
+    public $status;
 
 
     /**
