@@ -17,6 +17,11 @@ class Office extends Resource {
     public $moxi_works_office_id;
 
     /**
+     * @var string the id of the office
+     */
+    public $id;
+
+    /**
     #
      * @var string a URL to an image of the office.
      */
@@ -96,6 +101,16 @@ class Office extends Resource {
      * @var string URL of the office website
      */
     public $office_website;
+
+    /**
+     * @var string Common name of the office
+     */
+    public $common_name;
+
+    /**
+     * @var string region of the office
+     */
+    public $region;
 
     /**
      * Office constructor.
