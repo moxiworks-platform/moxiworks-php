@@ -41,24 +41,61 @@ class Agent extends Resource {
     public $client_company_id;
 
     /**
-     * @var string the agent's address, street and number
+     * @var string the agent's MLS ID
      */
-    public $address_street;
+    public $mls_agent_id;
 
     /**
-     * @var string the agent's address, city
+     * @var string the agent's license number
      */
-    public $address_city;
+    public $license;
 
     /**
-     * @var string the agent's address, state
+     * @var string agent's primary MLS name
      */
-    public $address_state;
+    public $mls_name;
 
     /**
-     * @var string the agent's address, zip code
+     * @var string the agent's primary MLS abbreviation
      */
-    public $address_zip;
+    public $mls_abbreviation;
+
+
+    /**
+     * @var string the agent's ID
+     */
+    public $agent_id;
+
+
+    /**
+     * @var string the agent's Office ID
+     */
+    public $office_id;
+
+
+    /**
+     * @var string the agent's Company ID
+     */
+    public $company_id;
+
+
+    /**
+     * @var string the agent's alternate phone number
+     */
+    public $alt_phone_number;
+
+
+    /**
+     * @var string the agent's lead routing email address
+     */
+    public $lead_routing_email_address;
+
+
+    /**
+     * @var string the agent's GCI goal
+     */
+    public $gc_goal;
+
 
     /**
      * @var string the agent's office address, street and number

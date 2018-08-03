@@ -334,7 +334,7 @@ class Listing extends Resource {
     /**
      * @var string Title of this listing
      */
-    public $title;
+    public $public_title;
 
     /**
      * @var string list_agent_moxi_works_office_id -- office ID of the listing agent
@@ -345,6 +345,18 @@ class Listing extends Resource {
      * @var string list_agent_office_id -- office ID of the listing agent
      */
     public $list_agent_office_id;
+
+
+    /**
+     * @var string Community this listing is located in
+     */
+    public $community;
+
+    /**
+     * @var string MLS area of this listing
+     */
+    public $list_office_aor_area;
+
 
 
     /**

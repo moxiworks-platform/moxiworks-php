@@ -293,6 +293,32 @@ class SoldListing extends Resource {
 
 
     /**
+     * @var string Title
+     */
+    public $public_title;
+
+    /**
+     * @var string Secondary listing agent name
+     */
+    public $secondary_list_agent_full_name;
+
+    /**
+     * @var string Community the listing is located in
+     */
+    public $community;
+
+    /**
+     * @var string The MLS Area which this listing is in.
+     */
+    public $list_office_aor_area;
+
+    /**
+     * @var string Virtual tour URL
+     */
+    public $virtual_tour_url;
+
+
+    /**
      * @var array of image arrays associated with the property in the format
      *
      * [
