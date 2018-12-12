@@ -242,7 +242,15 @@ class Agent extends Resource {
      */
     public $seller_commission_rate;
 
+    /**
+     * @var string agent's first name
+     */
+    public $first_name;
 
+    /**
+     * @var string agent's last name
+     */
+    public $last_name;
 
     /**
      * Agent constructor.
