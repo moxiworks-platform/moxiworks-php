@@ -62,6 +62,18 @@ class ActionLog extends Resource {
     public $timestamp;
 
     /**
+     * @var array of image associative arrays associated with the listing in the format
+     *
+     * [
+     *      "moxi_works_action_log_id" => "(string) unique identifier for the Moxi Works Platform ActionLog entry",
+     *      "type" => "(string) the type of ActionLog entry this is. The string should be formatted in lowercase with an underscore between each word",
+     *      "timestamp" => "(Integer) Unix timestamp for the creation time of the ActionLog entry",
+     *      "log_data" => "(Dictionary) the payload data of the ActionLog entry. The structure returned is dependent on the kind of ActionLog entry this is"
+     * ]
+     */
+    public $actions;
+
+    /**
      * ActionLog constructor.
      * @param array $data
      */
