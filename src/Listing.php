@@ -316,7 +316,7 @@ class Listing extends Resource {
     public $company_listing_attributes;
 
     /**
-     * @string Details URL for this listing.
+     * @var string Details URL for this listing.
      */
     public $listing_url;
 
