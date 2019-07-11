@@ -799,7 +799,7 @@ class Contact extends Resource {
             $url = Config::getUrl() . "/api/contacts";
         }
         $required_opts = array('partner_contact_id', 'moxi_works_agent_id', 'agent_uuid');
-        if(count(array_intersect(array_keys($opts), $required_opts) + 1) < count($required_opts))
+        if(count(array_intersect(array_keys($opts), $required_opts)) + 1 < count($required_opts))
             throw new ArgumentException(implode(',', $required_opts) . " are required");
         $contact = null;
         $json = Resource::apiConnection($method, $url, $opts);
