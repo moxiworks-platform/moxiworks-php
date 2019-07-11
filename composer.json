@@ -1,14 +1,14 @@
 {
   "name": "moxiworks/moxiworks_platform",
   "homepage": "https://github.com/moxiworks-platform/moxiworks-php",
-  "description": "Moxi Works Platform Client Library for PHP.",
+  "description": "MoxiWorks Platform Client Library for PHP.",
   "keywords": ["moxiworks"],
   "type": "library",
   "license": "Apache-2.0",
   "version": "0.13.13",
   "authors": [
     {
-      "name": "Moxi Works",
+      "name": "MoxiWorks",
       "homepage": "http://moxiworks.com"
     }
   ],
