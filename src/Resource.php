@@ -56,7 +56,7 @@ class Resource {
         $res = $client->request($method, $url, $query);
         $body = $res->getBody();
         if(!isset(Session::$cookie)) {
-            Session::$cookie = $res->getHeader('Set-Cookie');
+            Session::$cookie = $res->getHeader('set-cookie');
         }
         try {
             $json = json_decode($body, true);

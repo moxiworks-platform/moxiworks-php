@@ -346,7 +346,6 @@ class Listing extends Resource {
      */
     public $list_agent_office_id;
 
-
     /**
      * @var string Community this listing is located in
      */
@@ -358,6 +357,10 @@ class Listing extends Resource {
     public $list_office_aor_area;
 
 
+    /**
+     * @var integer Timestamp representing when the images for the listing were last updated
+     */
+    public $images_last_modified;
 
     /**
      * Listing constructor.
