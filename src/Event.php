@@ -10,11 +10,11 @@ use Symfony\Component\Translation\Tests\StringClass;
 class Event extends Resource {
 
     /**
-     * @var string the Moxi Works Platform ID of the agent
-     *   moxi_works_agent_id is the Moxi Works Platform ID of the agent which a event is
+     * @var string the MoxiWorks Platform ID of the agent
+     *   moxi_works_agent_id is the MoxiWorks Platform ID of the agent which a event is
      *   or is to be associated with.
      *
-     *   this must be set for any Moxi Works Platform transaction
+     *   this must be set for any MoxiWorks Platform transaction
      *
      */
     public $moxi_works_agent_id;
@@ -23,7 +23,7 @@ class Event extends Resource {
      * @var string your system's unique ID for the event
      *   *your system's* unique ID for the Event
      *
-     *   this must be set for any Moxi Works Platform transaction
+     *   this must be set for any MoxiWorks Platform transaction
      *
      */
     public $partner_event_id;
@@ -77,7 +77,7 @@ class Event extends Resource {
     public $all_day;
 
     /**
-     * @var string a comma separated list of attendee IDs using Contact IDs from your system (partner_contact_id) that have already been added to The Moxi Works Platform as a Contact
+     * @var string a comma separated list of attendee IDs using Contact IDs from your system (partner_contact_id) that have already been added to The MoxiWorks Platform as a Contact
      *
      * Contact must already have been created in order to be added as an attendee.
      *
@@ -105,7 +105,7 @@ class Event extends Resource {
     }
 
     /**
-     *  Create an Event on The Moxi Works Platform
+     *  Create an Event on The MoxiWorks Platform
      * <code>
      *   MoxiworksPlatform\Event::create([
      *     moxi_works_agent_id: '123abc',
@@ -120,7 +120,7 @@ class Event extends Resource {
      * </code>
      *
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Agent ID for the agent to which this event is to be associated
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The MoxiWorks Agent ID for the agent to which this event is to be associated
      *       <br><b>partner_event_id *REQUIRED* </b>Your system's unique ID for this event.
      *
      *       <h2>
@@ -147,14 +147,14 @@ class Event extends Resource {
     }
 
     /**
-     * Find a previously created Event on Moxi Works Platform.
+     * Find a previously created Event on MoxiWorks Platform.
      *
-     * find can be performed including your system's event id and the Moxi Works Agent ID in a parameter array
+     * find can be performed including your system's event id and the MoxiWorks Agent ID in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Event::find([moxi_works_agent_id: 'abc123', partner_event_id: 'my_system_event_id'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Agent ID for the agent to which this event is to be associated
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The MoxiWorks Agent ID for the agent to which this event is to be associated
      *       <br><b>partner_event_id *REQUIRED* </b>Your system's unique ID for this event.
      *
      *
@@ -168,14 +168,14 @@ class Event extends Resource {
     }
 
     /**
-     * Search for Events between start/end date on Moxi Works Platform.
+     * Search for Events between start/end date on MoxiWorks Platform.
      *
      * search can be performed by including date_start and date_end in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Event::search([moxi_works_agent_id: 'abc123', date_start: 1463595006, date_end: 1463599996])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b> string The Moxi Works Agent ID for the agent to which this event is associated
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b> string The MoxiWorks Agent ID for the agent to which this event is associated
      *       <br><b>date_start *REQUIRED*</b> integer  Unix timestamp representing the start time for the search
      *       <br><b>date_end *REQUIRED* </b>integer Unix timestamp representing the end time for the search
      *
@@ -212,7 +212,7 @@ class Event extends Resource {
     }
 
     /**
-     *  Update a previously created Event on The Moxi Works Platform
+     *  Update a previously created Event on The MoxiWorks Platform
      * <code>
      *   MoxiworksPlatform\Event::update([
      *     moxi_works_agent_id: '123abc',
@@ -227,7 +227,7 @@ class Event extends Resource {
      * </code>
      *
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Agent ID for the agent to which this event is to be associated
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The MoxiWorks Agent ID for the agent to which this event is to be associated
      *       <br><b>partner_event_id *REQUIRED* </b>Your system's unique ID for this event.
      *
      *       <h2>
@@ -255,7 +255,7 @@ class Event extends Resource {
     }
 
     /**
-     * Save Event to Moxi Works Platform
+     * Save Event to MoxiWorks Platform
      *
      * <code>
      *   $event = MoxiworksPlatform\Event::find([
@@ -272,7 +272,7 @@ class Event extends Resource {
 
 
     /**
-     * Remove a event your system has previously created on the Moxi Works Platform from an agent
+     * Remove a event your system has previously created on the MoxiWorks Platform from an agent
      *
      * @return Event|null
      *

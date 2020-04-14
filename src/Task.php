@@ -9,11 +9,11 @@ use Symfony\Component\Translation\Tests\StringClass;
 
 class Task extends Resource {
     /**
-     * @var string the Moxi Works Platform ID of the agent
-     *   moxi_works_agent_id is the Moxi Works Platform ID of the agent which a task is
+     * @var string the MoxiWorks Platform ID of the agent
+     *   moxi_works_agent_id is the MoxiWorks Platform ID of the agent which a task is
      *   or is to be associated with.
      *
-     *   this must be set for any Moxi Works Platform transaction
+     *   this must be set for any MoxiWorks Platform transaction
      *
      */
     public $moxi_works_agent_id;
@@ -22,7 +22,7 @@ class Task extends Resource {
      * @var string your system's unique ID for the contact
      *   *your system's* unique ID for the Contact associated with this Task
      *
-     *   this must be set for any Moxi Works Platform transaction
+     *   this must be set for any MoxiWorks Platform transaction
      *
      */
     public $partner_contact_id;
@@ -31,7 +31,7 @@ class Task extends Resource {
      * @var string your system's unique ID for the task
      *   *your system's* unique ID for the Task
      *
-     *   this must be set for any Moxi Works Platform transaction
+     *   this must be set for any MoxiWorks Platform transaction
      *
      */
     public $partner_task_id;
@@ -81,7 +81,7 @@ class Task extends Resource {
      *   the Unix timestamp representing the creation date of this Task
      *
      *  this is a read-only attribute which gets set automatically on creation of
-     *  the task in the Moxi Works Platform
+     *  the task in the MoxiWorks Platform
      */
     public $created_at;
 
@@ -119,7 +119,7 @@ class Task extends Resource {
     }
 
     /**
-     *  Create a Task on The Moxi Works Platform
+     *  Create a Task on The MoxiWorks Platform
      * <code>
      *   MoxiworksPlatform\Task::create([
      *     moxi_works_agent_id: '123abc',
@@ -132,7 +132,7 @@ class Task extends Resource {
      * </code>
      *
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Agent ID for the agent to which this task is to be associated
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The MoxiWorks Agent ID for the agent to which this task is to be associated
      *       <br><b>partner_contact_id *REQUIRED* </b>Your system's unique ID for the contact associated with this task.
      *       <br><b>partner_task_id *REQUIRED* </b>Your system's unique ID for this task.
      *       <br><b>due_at *REQUIRED* </b>Unix timestamp representing the due date of this task
@@ -158,7 +158,7 @@ class Task extends Resource {
     }
 
     /**
-     *  Update a previously created Task on The Moxi Works Platform
+     *  Update a previously created Task on The MoxiWorks Platform
      * <code>
      *   MoxiworksPlatform\Task::update([
      *     moxi_works_agent_id: '123abc',
@@ -173,7 +173,7 @@ class Task extends Resource {
      * </code>
      *
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Agent ID for the agent to which this task is to be associated
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The MoxiWorks Agent ID for the agent to which this task is to be associated
      *       <br><b>partner_contact_id *REQUIRED* </b>Your system's unique ID for the contact associated with this task.
      *       <br><b>partner_task_id *REQUIRED* </b>Your system's unique ID for this task.
      *       <br><b>due_at *REQUIRED* </b>Unix timestamp representing the due date of this task
@@ -203,14 +203,14 @@ class Task extends Resource {
 
 
     /**
-     * Find a previously created Task on Moxi Works Platform.
+     * Find a previously created Task on MoxiWorks Platform.
      *
-     * find can be performed including your system's task id and the Moxi Works Agent ID in a parameter array
+     * find can be performed including your system's task id and the MoxiWorks Agent ID in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Task::find([moxi_works_agent_id: 'abc123', partner_task_id: 'my_system_task_id'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Agent ID for the agent to which this task is to be associated
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The MoxiWorks Agent ID for the agent to which this task is to be associated
      *       <br><b>partner_task_id *REQUIRED* </b>Your system's unique ID for this task.
      *
      *
@@ -224,14 +224,14 @@ class Task extends Resource {
     }
 
     /**
-     * Search for Tasks between start/end date on Moxi Works Platform.
+     * Search for Tasks between start/end date on MoxiWorks Platform.
      *
      * search can be performed by including due_date_start and due_date_end in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Task::search([moxi_works_agent_id: 'abc123', date_start: 1463595006, date_end: 1463599996])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b> string The Moxi Works Agent ID for the agent to which this task is associated
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b> string The MoxiWorks Agent ID for the agent to which this task is associated
      *       <br><b>date_start *REQUIRED*</b> integer  Unix timestamp representing the start time for the search
      *       <br><b>date_end *REQUIRED* </b>integer Unix timestamp representing the end time for the search
      *
@@ -277,7 +277,7 @@ class Task extends Resource {
 
 
     /**
-     * Save Task to Moxi Works Platform
+     * Save Task to MoxiWorks Platform
      *
      * <code>
      *   $task = MoxiworksPlatform\Task::find([

@@ -11,10 +11,10 @@ use Symfony\Component\Translation\Tests\StringClass;
 
 class SoldListing extends Resource {
     /**
-     * @var string the Moxi Works Platform ID of the SoldListing
-     *   moxi_works_listing_id is the Moxi Works Platform ID of the SoldListing
+     * @var string the MoxiWorks Platform ID of the SoldListing
+     *   moxi_works_listing_id is the MoxiWorks Platform ID of the SoldListing
      *
-     *   this must be set for any Moxi Works Platform transaction
+     *   this must be set for any MoxiWorks Platform transaction
      *
      */
     public $moxi_works_listing_id;
@@ -185,7 +185,7 @@ class SoldListing extends Resource {
     public $list_agent_full_name;
 
     /**
-     * @var string moxi works agent id of SoldListing agent
+     * @var string MoxiWorks agent id of SoldListing agent
      */
     public $list_agent_uuid;
 
@@ -235,7 +235,7 @@ class SoldListing extends Resource {
     public $tax_year;
 
     /**
-     * @var string moxi works agent id of secondary SoldListing agent
+     * @var string MoxiWorks agent id of secondary SoldListing agent
      */
     public $secondary_list_agent_uuid;
 
@@ -377,14 +377,14 @@ class SoldListing extends Resource {
 
 
     /**
-     * Find a SoldListing on Moxi Works Platform.
+     * Find a SoldListing on MoxiWorks Platform.
      *
-     * find can be performed including the Moxi Works SoldListing ID in a parameter array
+     * find can be performed including the MoxiWorks SoldListing ID in a parameter array
      *  <code>
      *  \MoxiworksPlatform\SoldListing::find([moxi_works_listing_id: 'abc123'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_listing_id *REQUIRED* </b>The Moxi Works SoldListing ID for the SoldListing
+     *       <br><b>moxi_works_listing_id *REQUIRED* </b>The MoxiWorks SoldListing ID for the SoldListing
      *
      *
      * @return SoldListing|null
@@ -398,14 +398,14 @@ class SoldListing extends Resource {
     }
 
     /**
-     * Search for SoldListings by Company on Moxi Works Platform.
+     * Search for SoldListings by Company on MoxiWorks Platform.
      *
      * search can be performed by including moxi_works_company_id and sold_since in a parameter array
      *  <code>
      *  \MoxiworksPlatform\SoldListing::search([moxi_works_company_id: 'abc123', sold_since: 1463595006])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_company_id *REQUIRED* </b> string The Moxi Works Company ID for the company in which we are searching for SoldListings
+     *       <br><b>moxi_works_company_id *REQUIRED* </b> string The MoxiWorks Company ID for the company in which we are searching for SoldListings
      *
      *       <h2>
      *     optional Task search parameters

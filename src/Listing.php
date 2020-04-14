@@ -11,10 +11,10 @@ use Symfony\Component\Translation\Tests\StringClass;
 
 class Listing extends Resource {
     /**
-     * @var string the Moxi Works Platform ID of the listing
-     *   moxi_works_listing_id is the Moxi Works Platform ID of the listing
+     * @var string the MoxiWorks Platform ID of the listing
+     *   moxi_works_listing_id is the MoxiWorks Platform ID of the listing
      *
-     *   this must be set for any Moxi Works Platform transaction
+     *   this must be set for any MoxiWorks Platform transaction
      *
      */
     public $moxi_works_listing_id;
@@ -185,7 +185,7 @@ class Listing extends Resource {
     public $list_agent_full_name;
 
     /**
-     * @var string moxi works agent id of listing agent
+     * @var string MoxiWorks agent id of listing agent
      */
     public $list_agent_uuid;
 
@@ -235,7 +235,7 @@ class Listing extends Resource {
     public $tax_year;
 
     /**
-     * @var string moxi works agent id of secondary listing agent
+     * @var string MoxiWorks agent id of secondary listing agent
      */
     public $secondary_list_agent_uuid;
 
@@ -377,14 +377,14 @@ class Listing extends Resource {
 
 
     /**
-     * Find a Listing on Moxi Works Platform.
+     * Find a Listing on MoxiWorks Platform.
      *
-     * find can be performed including the Moxi Works Listing ID in a parameter array
+     * find can be performed including the MoxiWorks Listing ID in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Listing::find([moxi_works_listing_id: 'abc123'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_listing_id *REQUIRED* </b>The Moxi Works Listing ID for the listing
+     *       <br><b>moxi_works_listing_id *REQUIRED* </b>The MoxiWorks Listing ID for the listing
      *
      *
      * @return Listing|null
@@ -398,14 +398,14 @@ class Listing extends Resource {
     }
 
     /**
-     * Search for Listings by Company on Moxi Works Platform.
+     * Search for Listings by Company on MoxiWorks Platform.
      *
      * search can be performed by including moxi_works_company_id and updated_since in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Listing::search([moxi_works_company_id: 'abc123', updated_since: 1463595006])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_company_id *REQUIRED* </b> string The Moxi Works Company ID for the company in which we are searching for listings
+     *       <br><b>moxi_works_company_id *REQUIRED* </b> string The MoxiWorks Company ID for the company in which we are searching for listings
      *
      *       <h2>
      *     optional Task search parameters

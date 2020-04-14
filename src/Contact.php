@@ -12,11 +12,11 @@ use Symfony\Component\Translation\Tests\StringClass;
 class Contact extends Resource {
 
     /**
-     * @var string the Moxi Works Platform ID of the agent
-     *   moxi_works_agent_id is the Moxi Works Platform ID of the agent which a contact is
+     * @var string the MoxiWorks Platform ID of the agent
+     *   moxi_works_agent_id is the MoxiWorks Platform ID of the agent which a contact is
      *   or is to be associated with.
      *
-     *   this must be set for any Moxi Works Platform transaction
+     *   this must be set for any MoxiWorks Platform transaction
      *
      */
     public $moxi_works_agent_id;
@@ -25,7 +25,7 @@ class Contact extends Resource {
      * @var string your system's unique ID for the contact
      *   *your system's* unique ID for the Contact
      *
-     *   this must be set for any Moxi Works Platform transaction
+     *   this must be set for any MoxiWorks Platform transaction
      *
      */
     public $partner_contact_id;
@@ -43,7 +43,7 @@ class Contact extends Resource {
      *   the gender  of this Contact. the first initial of either gender type may
      *   be used or the full word 'male' or 'female.'
      *   <p>
-     *   <b>note: The single character representation will be used after saving to Moxi Works Platform  no matter whether the word or single character representation is passed in.</b>
+     *   <b>note: The single character representation will be used after saving to MoxiWorks Platform  no matter whether the word or single character representation is passed in.</b>
      *
      */
     public $gender;
@@ -484,7 +484,7 @@ class Contact extends Resource {
     }
 
     /**
-     *  Create a Contact on The Moxi Works Platform
+     *  Create a Contact on The MoxiWorks Platform
      * <code>
      *   MoxiworksPlatform\Contact::create([
      *     moxi_works_agent_id: '123abc',
@@ -505,8 +505,8 @@ class Contact extends Resource {
      * </code>
      *
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The Moxi Works Agent ID for the agent to which this contact is to be associated
-     *       <br><b>agent_uuid *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The Moxi Works Agent UUID for the agent to which this contact is to be associated
+     *       <br><b>moxi_works_agent_id *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The MoxiWorks Agent ID for the agent to which this contact is to be associated
+     *       <br><b>agent_uuid *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The MoxiWorks Agent UUID for the agent to which this contact is to be associated
      *       <br><b>partner_contact_id *REQUIRED* </b>Your system's unique ID for this contact.
      *
      *       <h2>
@@ -588,15 +588,15 @@ class Contact extends Resource {
     }
 
     /**
-     * Find a previously created Contact on Moxi Works Platform.
+     * Find a previously created Contact on MoxiWorks Platform.
      *
-     * find can be performed including your system's contact id and the Moxi Works Agent ID in a parameter array
+     * find can be performed including your system's contact id and the MoxiWorks Agent ID in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Contact::find([moxi_works_agent_id: 'abc123', partner_contact_id: 'my_system_contact_id'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The Moxi Works Agent ID for the agent to which this contact is associated
-     *       <br><b>agent_uuid *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The Moxi Works Agent UUID for the agent to which this contact is associated
+     *       <br><b>moxi_works_agent_id *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The MoxiWorks Agent ID for the agent to which this contact is associated
+     *       <br><b>agent_uuid *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The MoxiWorks Agent UUID for the agent to which this contact is associated
      *       <br><b>partner_contact_id *REQUIRED* </b>Your system's unique ID for this contact.
      *
      *
@@ -611,15 +611,15 @@ class Contact extends Resource {
     }
 
     /**
-     * Search for Contact by name/email/phone on Moxi Works Platform.
+     * Search for Contact by name/email/phone on MoxiWorks Platform.
      *
      * search can be performed by including contact_name and/or email_address and/or phone_number in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Contact::search([moxi_works_agent_id: 'abc123', contact_name: 'Buckminster Fuller'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The Moxi Works Agent ID for the agent to which this contact is associated
-     *       <br><b>agent_uuid *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The Moxi Works Agent UUID for the agent to which this contact is associated
+     *       <br><b>moxi_works_agent_id *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The MoxiWorks Agent ID for the agent to which this contact is associated
+     *       <br><b>agent_uuid *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The MoxiWorks Agent UUID for the agent to which this contact is associated
      *       <br><b>contact_name</b>full name of the contact
      *       <br><b>email_address</b>email address of the contact
      *       <br><b>phone_number</b>phone number of the contact
@@ -661,7 +661,7 @@ class Contact extends Resource {
 
     /**
      *
-     * Updates a previously created Contact in Moxi Works Platform
+     * Updates a previously created Contact in MoxiWorks Platform
      * <code>
      *   MoxiworksPlatform\Contact::update([
      *     moxi_works_agent_id: '123abc',
@@ -682,8 +682,8 @@ class Contact extends Resource {
      * </code>
      *
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The Moxi Works Agent ID for the agent to which this contact is associated
-     *       <br><b>agent_uuid *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The Moxi Works Agent UUID for the agent to which this contact is associated
+     *       <br><b>moxi_works_agent_id *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The MoxiWorks Agent ID for the agent to which this contact is associated
+     *       <br><b>agent_uuid *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The MoxiWorks Agent UUID for the agent to which this contact is associated
      *       <br><b>partner_contact_id *REQUIRED* </b>Your system's unique ID for this contact.
      *
      *       <h2>
@@ -756,7 +756,7 @@ class Contact extends Resource {
     }
 
     /**
-     * Save Contact to Moxi Works Platform
+     * Save Contact to MoxiWorks Platform
      *
      * <code>
      *   $contact = MoxiworksPlatform\Contact::find([
@@ -772,7 +772,7 @@ class Contact extends Resource {
     }
 
     /**
-     * Remove a contact your system has previously created on the Moxi Works Platform from an agent
+     * Remove a contact your system has previously created on the MoxiWorks Platform from an agent
      *
      * @return Contact|null
      *

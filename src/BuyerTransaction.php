@@ -9,23 +9,23 @@ use Symfony\Component\Translation\Tests\StringClass;
 
 class BuyerTransaction extends Resource {
     /**
-     * @var string the Moxi Works Platform ID of the agent
-     *   moxi_works_agent_id is the Moxi Works Platform ID of the agent which a BuyerTransaction is
+     * @var string the MoxiWorks Platform ID of the agent
+     *   moxi_works_agent_id is the MoxiWorks Platform ID of the agent which a BuyerTransaction is
      *   or is to be associated with.
      *
-     *   this must be set for any Moxi Works Platform BuyerTransaction request
+     *   this must be set for any MoxiWorks Platform BuyerTransaction request
      *
      */
     public $moxi_works_agent_id;
 
     /**
-     * @var string the Moxi Works Platform ID of the BuyerTransaction
+     * @var string the MoxiWorks Platform ID of the BuyerTransaction
      *
      */
     public $moxi_works_transaction_id;
 
     /**
-     * @var string the Moxi Works Platform ID of the Contact
+     * @var string the MoxiWorks Platform ID of the Contact
      *
      * either moxi_works_contact_id or partner_contact_id can be used
      *
@@ -62,7 +62,7 @@ class BuyerTransaction extends Resource {
      * stage number that the BuyerTransaction is currently in.
      *
      * This will be a single digit integer that can be [1,2,3,4,5].
-     * For more information on BuyerTransaction stages see The Moxi Works Platform BuyerTransaction Stages Documentation
+     * For more information on BuyerTransaction stages see The MoxiWorks Platform BuyerTransaction Stages Documentation
      *
      */
     public $stage;
@@ -72,12 +72,12 @@ class BuyerTransaction extends Resource {
      *
      * This attribute displays a human readable stage name that is
      * associated with the current stage attribute. When created
-     * through the Moxi Works Platform BuyerTransaction objects
+     * through the MoxiWorks Platform BuyerTransaction objects
      * will automatically be configured as 'active' transactions.
      *
      * This will be an enumerated string that can be can be
      * 'initialized', 'configured' , 'active' , 'pending'  or 'complete'
-     * For more information on BuyerTransaction stages see The Moxi Works Platform BuyerTransaction Stages Documentation
+     * For more information on BuyerTransaction stages see The MoxiWorks Platform BuyerTransaction Stages Documentation
      *
      */
     public $stage_name;
@@ -250,7 +250,7 @@ class BuyerTransaction extends Resource {
      *
      * In order to promote a BuyerTransaction to the next stage, set  the
      * promote_transaction attribute to true. For more information about
-     * BuyerTransaction stages, see The Moxi Works Platform Promoting BuyerTransaction Documentation.
+     * BuyerTransaction stages, see The MoxiWorks Platform Promoting BuyerTransaction Documentation.
      * promote_transaction is only available for BuyerTransaction updates.
      * Newly created BuyerTransaction objects will automatically be created in
      * stage 3 (active)
@@ -275,7 +275,7 @@ class BuyerTransaction extends Resource {
     }
 
     /**
-     *  Create a BuyerTransaction on The Moxi Works Platform
+     *  Create a BuyerTransaction on The MoxiWorks Platform
      * <code>
      *   MoxiworksPlatform\BuyerTransaction::create([
      *     'moxi_works_agent_id' => '123abc',
@@ -299,9 +299,9 @@ class BuyerTransaction extends Resource {
      * </code>
      *
      *
-     *        <br><b> moxi_works_agent_id *REQUIRED*</b> The Moxi Works Agent ID for the agent to which this transaction is to be associated
+     *        <br><b> moxi_works_agent_id *REQUIRED*</b> The MoxiWorks Agent ID for the agent to which this transaction is to be associated
      *        <br><b> partner_transaction_id *REQUIRED*</b> Your system's unique ID for this transaction.
-     *        <br><b> partner_contact_id *REQUIRED*</b> Your system's unique id for associated contact. should already have been created in Moxi Works Platform.
+     *        <br><b> partner_contact_id *REQUIRED*</b> Your system's unique id for associated contact. should already have been created in MoxiWorks Platform.
      *
      *          <h2>
      *              optional BuyerTransaction parameters
@@ -343,7 +343,7 @@ class BuyerTransaction extends Resource {
     }
 
     /**
-     *  Update a previously created BuyerTransaction on The Moxi Works Platform
+     *  Update a previously created BuyerTransaction on The MoxiWorks Platform
      * <code>
      *   MoxiworksPlatform\BuyerTransaction::create([
      *     'moxi_works_agent_id' => '123abc',
@@ -371,8 +371,8 @@ class BuyerTransaction extends Resource {
      * </code>
      *
      *
-     *        <br><b> moxi_works_agent_id *REQUIRED*</b> The Moxi Works Agent ID for the agent to which this transaction is to be associated
-     *        <br><b> partner_transaction_id *REQUIRED*</b> The Moxi Works Platform unique ID for the BuyerTransaction you want to update.
+     *        <br><b> moxi_works_agent_id *REQUIRED*</b> The MoxiWorks Agent ID for the agent to which this transaction is to be associated
+     *        <br><b> partner_transaction_id *REQUIRED*</b> The MoxiWorks Platform unique ID for the BuyerTransaction you want to update.
      *
      *          <h2>
      *              optional BuyerTransaction parameters
@@ -399,7 +399,7 @@ class BuyerTransaction extends Resource {
      *        <br><b> mls_number</b>  mls number associated with the transaction
      *        <br><b> closing_price</b>  closing price associated with the transaction
      *        <br><b> closing_timestamp</b>  Unix timestamp representing the date the transaction closed associated with the transaction
-     *        <br><b> promote_transaction</b> If this is set to true then The Moxi Works Platform will promote this transaction to the next stage
+     *        <br><b> promote_transaction</b> If this is set to true then The MoxiWorks Platform will promote this transaction to the next stage
      *
      *
      * @param array $attributes
@@ -418,15 +418,15 @@ class BuyerTransaction extends Resource {
     }
 
     /**
-     * Find a previously created BuyerTransaction on Moxi Works Platform.
+     * Find a previously created BuyerTransaction on MoxiWorks Platform.
      *
-     * find can be performed including the Moxi Works BuyerTransaction id and the Moxi Works Agent ID in a parameter array
+     * find can be performed including the MoxiWorks BuyerTransaction id and the MoxiWorks Agent ID in a parameter array
      *  <code>
      *  \MoxiworksPlatform\BuyerTransaction::find([moxi_works_agent_id: 'abc123', moxi_works_transaction_id: 'deadbeef-feed-face-bad4-dad2feedface'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Platform Agent ID for the agent to which this transaction is to be associated
-     *       <br><b>moxi_works_transaction_id *REQUIRED* </b>The Moxi Works Platform BuyerTransaction ID.
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The MoxiWorks Platform Agent ID for the agent to which this transaction is to be associated
+     *       <br><b>moxi_works_transaction_id *REQUIRED* </b>The MoxiWorks Platform BuyerTransaction ID.
      *
      *
      * @return BuyerTransaction|null
@@ -445,19 +445,19 @@ class BuyerTransaction extends Resource {
 
 
     /**
-     * Search for BuyerTransaction objects for an Agent on Moxi Works Platform.
+     * Search for BuyerTransaction objects for an Agent on MoxiWorks Platform.
      *
      * search can be performed by including moxi_works_agent_id in a parameter array
      *  <code>
      *  \MoxiworksPlatform\BuyerTransaction::search(['moxi_works_agent_id' => 'abc123', 'page_number' => 3, moxi_works_contact_id => 'deadbeef-feed-face-bad4-dad2feedface'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b> string The Moxi Works Agent ID for the agent to which this task is associated
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b> string The MoxiWorks Agent ID for the agent to which this task is associated
      *
      *       <h2>
      *     optional BuyerTransaction search parameters
      * </h2>
-     *      <br><b>moxi_works_contact_id</b> The Moxi Works Platform Contact ID for a specific Contact about whom BuyerTransactions are to be returned -- either moxi_works_contact_id or partner_contact_id can be used
+     *      <br><b>moxi_works_contact_id</b> The MoxiWorks Platform Contact ID for a specific Contact about whom BuyerTransactions are to be returned -- either moxi_works_contact_id or partner_contact_id can be used
      *      <br><b>partner_contact_id</b>  your system's ID for a specific contact for whom BuyerTransaction objects are to be returned  -- either moxi_works_contact_id or partner_contact_id can be used
      *      <br><b>page_number</b>  page number of responses to return (if number of responses spans a beyond a single page of responses)
      *
@@ -498,7 +498,7 @@ class BuyerTransaction extends Resource {
 
 
     /**
-     * Save BuyerTransaction to Moxi Works Platform
+     * Save BuyerTransaction to MoxiWorks Platform
      *
      * <code>
      *   $transaction = MoxiworksPlatform\BuyerTransaction::find([

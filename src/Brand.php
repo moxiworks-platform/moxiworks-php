@@ -99,14 +99,14 @@ class Brand extends Resource {
     }
 
     /**
-     * Find a Brand on Moxi Works Platform.
+     * Find a Brand on MoxiWorks Platform.
      *
-     * find can be performed including the Moxi Works Company ID in a parameter array
+     * find can be performed including the MoxiWorks Company ID in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Brand::find([moxi_works_company_id: 'abc123'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_company_id *REQUIRED* </b>The Moxi Works Company ID
+     *       <br><b>moxi_works_company_id *REQUIRED* </b>The MoxiWorks Company ID
      *
      *
      * @return Brand|null
@@ -120,15 +120,15 @@ class Brand extends Resource {
     }
 
     /**
-     * Search for Brands by Agent ID on Moxi Works Platform.
+     * Search for Brands by Agent ID on MoxiWorks Platform.
      *
      * search can be performed by including moxi_works_company_id and updated_since in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Brand::search([moxi_works_agent_id: 'abc123'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_company_id  </b> string The Moxi Works Company ID for the company in which we are searching for brands
-     *       <br><b>moxi_works_agent_id  </b> string The Moxi Works Agent ID for the agent in which we are searching for brands
+     *       <br><b>moxi_works_company_id  </b> string The MoxiWorks Company ID for the company in which we are searching for brands
+     *       <br><b>moxi_works_agent_id  </b> string The MoxiWorks Agent ID for the agent in which we are searching for brands
      *
      *       <h2>
      *     optional Task search parameters

@@ -125,15 +125,15 @@ class Office extends Resource {
     }
 
     /**
-     * Find an Office on Moxi Works Platform.
+     * Find an Office on MoxiWorks Platform.
      *
-     * find can be performed including the Moxi Works Office ID and Moxi Works Company ID in a parameter array
+     * find can be performed including the MoxiWorks Office ID and MoxiWorks Company ID in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Office::find([moxi_works_office_id: 'abc123', 'moxi_works_company_id' => 'foo_bar'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_office_id *REQUIRED* </b>The Moxi Works Office ID
-     *       <br><b>moxi_works_company_id *REQUIRED* </b>The Moxi Works Company ID
+     *       <br><b>moxi_works_office_id *REQUIRED* </b>The MoxiWorks Office ID
+     *       <br><b>moxi_works_company_id *REQUIRED* </b>The MoxiWorks Company ID
      *
      *
      * @return Office|null
@@ -147,14 +147,14 @@ class Office extends Resource {
     }
 
     /**
-     * Search for Offices by Company on Moxi Works Platform.
+     * Search for Offices by Company on MoxiWorks Platform.
      *
      * search can be performed by including moxi_works_company_id in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Office::search([moxi_works_company_id: 'abc123'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_company_id *REQUIRED* </b> string The Moxi Works Company ID for the company in which we are searching for offices
+     *       <br><b>moxi_works_company_id *REQUIRED* </b> string The MoxiWorks Company ID for the company in which we are searching for offices
      *
      *       <h2>
      *     optional Task search parameters

@@ -2,7 +2,7 @@
 
 namespace MoxiworksPlatform;
 
-/** Object used to manage Moxi Works Platform Session
+/** Object used to manage MoxiWorks Platform Session
  *
  */
 class Session

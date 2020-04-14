@@ -9,23 +9,23 @@ use Symfony\Component\Translation\Tests\StringClass;
 
 class SellerTransaction extends Resource {
     /**
-     * @var string the Moxi Works Platform ID of the agent
-     *   moxi_works_agent_id is the Moxi Works Platform ID of the agent which a SellerTransaction is
+     * @var string the MoxiWorks Platform ID of the agent
+     *   moxi_works_agent_id is the MoxiWorks Platform ID of the agent which a SellerTransaction is
      *   or is to be associated with.
      *
-     *   this must be set for any Moxi Works Platform SellerTransaction request
+     *   this must be set for any MoxiWorks Platform SellerTransaction request
      *
      */
     public $moxi_works_agent_id;
 
     /**
-     * @var string the Moxi Works Platform ID of the SellerTransaction
+     * @var string the MoxiWorks Platform ID of the SellerTransaction
      *
      */
     public $moxi_works_transaction_id;
 
     /**
-     * @var string the Moxi Works Platform ID of the Contact
+     * @var string the MoxiWorks Platform ID of the Contact
      *
      * either moxi_works_contact_id or partner_contact_id can be used
      *
@@ -62,7 +62,7 @@ class SellerTransaction extends Resource {
      * stage number that the SellerTransaction is currently in.
      *
      * This will be a single digit integer that can be [1,2,3,4,5].
-     * For more information on SellerTransaction stages see The Moxi Works Platform SellerTransaction Stages Documentation
+     * For more information on SellerTransaction stages see The MoxiWorks Platform SellerTransaction Stages Documentation
      *
      */
     public $stage;
@@ -72,12 +72,12 @@ class SellerTransaction extends Resource {
      *
      * This attribute displays a human readable stage name that is
      * associated with the current stage attribute. When created
-     * through the Moxi Works Platform SellerTransaction objects
+     * through the MoxiWorks Platform SellerTransaction objects
      * will automatically be configured as 'active' transactions.
      *
      * This will be an enumerated string that can be can be
      * 'initialized', 'configured' , 'active' , 'pending'  or 'complete'
-     * For more information on SellerTransaction stages see The Moxi Works Platform SellerTransaction Stages Documentation
+     * For more information on SellerTransaction stages see The MoxiWorks Platform SellerTransaction Stages Documentation
      *
      */
     public $stage_name;
@@ -249,7 +249,7 @@ class SellerTransaction extends Resource {
      *
      * In order to promote a SellerTransaction to the next stage, set  the
      * promote_transaction attribute to true. For more information about
-     * SellerTransaction stages, see The Moxi Works Platform Promoting SellerTransaction Documentation.
+     * SellerTransaction stages, see The MoxiWorks Platform Promoting SellerTransaction Documentation.
      * promote_transaction is only available for SellerTransaction updates.
      * Newly created SellerTransaction objects will automatically be created in
      * stage 3 (active)
@@ -273,7 +273,7 @@ class SellerTransaction extends Resource {
     }
 
     /**
-     *  Create a SellerTransaction on The Moxi Works Platform
+     *  Create a SellerTransaction on The MoxiWorks Platform
      * <code>
      *   MoxiworksPlatform\SellerTransaction::create([
      *     'moxi_works_agent_id' => '123abc',
@@ -297,9 +297,9 @@ class SellerTransaction extends Resource {
      * </code>
      *
      *
-     *        <br><b> moxi_works_agent_id *REQUIRED*</b> The Moxi Works Agent ID for the agent to which this transaction is to be associated
+     *        <br><b> moxi_works_agent_id *REQUIRED*</b> The MoxiWorks Agent ID for the agent to which this transaction is to be associated
      *        <br><b> partner_transaction_id *REQUIRED*</b> Your system's unique ID for this transaction.
-     *        <br><b> partner_contact_id *REQUIRED*</b> Your system's unique id for associated contact. should already have been created in Moxi Works Platform.
+     *        <br><b> partner_contact_id *REQUIRED*</b> Your system's unique id for associated contact. should already have been created in MoxiWorks Platform.
      *
      *          <h2>
      *              optional SellerTransaction parameters
@@ -341,7 +341,7 @@ class SellerTransaction extends Resource {
     }
 
     /**
-     *  Update a previously created SellerTransaction on The Moxi Works Platform
+     *  Update a previously created SellerTransaction on The MoxiWorks Platform
      * <code>
      *   MoxiworksPlatform\SellerTransaction::create([
      *     'moxi_works_agent_id' => '123abc',
@@ -369,8 +369,8 @@ class SellerTransaction extends Resource {
      * </code>
      *
      *
-     *        <br><b> moxi_works_agent_id *REQUIRED*</b> The Moxi Works Agent ID for the agent to which this transaction is to be associated
-     *        <br><b> partner_transaction_id *REQUIRED*</b> The Moxi Works Platform unique ID for the SellerTransaction you want to update.
+     *        <br><b> moxi_works_agent_id *REQUIRED*</b> The MoxiWorks Agent ID for the agent to which this transaction is to be associated
+     *        <br><b> partner_transaction_id *REQUIRED*</b> The MoxiWorks Platform unique ID for the SellerTransaction you want to update.
      *
      *          <h2>
      *              optional SellerTransaction parameters
@@ -397,7 +397,7 @@ class SellerTransaction extends Resource {
      *        <br><b> mls_number</b>  mls number associated with the transaction
      *        <br><b> closing_price</b>  closing price associated with the transaction
      *        <br><b> closing_timestamp</b>  Unix timestamp representing the date the transaction closed associated with the transaction
-     *        <br><b> promote_transaction</b> If this is set to true then The Moxi Works Platform will promote this transaction to the next stage
+     *        <br><b> promote_transaction</b> If this is set to true then The MoxiWorks Platform will promote this transaction to the next stage
      *
      *
      * @param array $attributes
@@ -416,15 +416,15 @@ class SellerTransaction extends Resource {
     }
 
     /**
-     * Find a previously created SellerTransaction on Moxi Works Platform.
+     * Find a previously created SellerTransaction on MoxiWorks Platform.
      *
-     * find can be performed including the Moxi Works SellerTransaction id and the Moxi Works Agent ID in a parameter array
+     * find can be performed including the MoxiWorks SellerTransaction id and the MoxiWorks Agent ID in a parameter array
      *  <code>
      *  \MoxiworksPlatform\SellerTransaction::find([moxi_works_agent_id: 'abc123', moxi_works_transaction_id: 'deadbeef-feed-face-bad4-dad2feedface'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Platform Agent ID for the agent to which this transaction is to be associated
-     *       <br><b>moxi_works_transaction_id *REQUIRED* </b>The Moxi Works Platform SellerTransaction ID.
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The MoxiWorks Platform Agent ID for the agent to which this transaction is to be associated
+     *       <br><b>moxi_works_transaction_id *REQUIRED* </b>The MoxiWorks Platform SellerTransaction ID.
      *
      *
      * @return SellerTransaction|null
@@ -443,19 +443,19 @@ class SellerTransaction extends Resource {
 
 
     /**
-     * Search for SellerTransaction objects for an Agent on Moxi Works Platform.
+     * Search for SellerTransaction objects for an Agent on MoxiWorks Platform.
      *
      * search can be performed by including moxi_works_agent_id in a parameter array
      *  <code>
      *  \MoxiworksPlatform\SellerTransaction::search(['moxi_works_agent_id' => 'abc123', 'page_number' => 3, moxi_works_contact_id => 'deadbeef-feed-face-bad4-dad2feedface'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b> string The Moxi Works Agent ID for the agent to which this task is associated
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b> string The MoxiWorks Agent ID for the agent to which this task is associated
      *
      *       <h2>
      *     optional SellerTransaction search parameters
      * </h2>
-     *      <br><b>moxi_works_contact_id</b> The Moxi Works Platform Contact ID for a specific Contact about whom SellerTransactions are to be returned -- either moxi_works_contact_id or partner_contact_id can be used
+     *      <br><b>moxi_works_contact_id</b> The MoxiWorks Platform Contact ID for a specific Contact about whom SellerTransactions are to be returned -- either moxi_works_contact_id or partner_contact_id can be used
      *      <br><b>partner_contact_id</b>  your system's ID for a specific contact for whom SellerTransaction objects are to be returned  -- either moxi_works_contact_id or partner_contact_id can be used
      *      <br><b>page_number</b>  page number of responses to return (if number of responses spans a beyond a single page of responses)
      *
@@ -496,7 +496,7 @@ class SellerTransaction extends Resource {
 
 
     /**
-     * Save SellerTransaction to Moxi Works Platform
+     * Save SellerTransaction to MoxiWorks Platform
      *
      * <code>
      *   $transaction = MoxiworksPlatform\SellerTransaction::find([

@@ -13,7 +13,7 @@ use Symfony\Component\Translation\Tests\StringClass;
 class Company {
 
     /**
-     * @var string the Moxi Works Platform ID of the company
+     * @var string the MoxiWorks Platform ID of the company
      *
      *
      */
@@ -48,14 +48,14 @@ class Company {
 
 
     /**
-     * Find a Company on Moxi Works Platform.
+     * Find a Company on MoxiWorks Platform.
      *
-     * find can be performed including the Moxi Works Company ID in a parameter array
+     * find can be performed including the MoxiWorks Company ID in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Company::find([moxi_works_company_id: 'abc123'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_company_id *REQUIRED* </b>The Moxi Works Company ID
+     *       <br><b>moxi_works_company_id *REQUIRED* </b>The MoxiWorks Company ID
      *
      *
      * @return Company|null
@@ -75,7 +75,7 @@ class Company {
     }
 
     /**
-     * Search for Companies on Moxi Works Platform.
+     * Search for Companies on MoxiWorks Platform.
      *
      *  <code>
      *  \MoxiworksPlatform\Company::search()

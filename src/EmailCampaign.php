@@ -9,11 +9,11 @@ use Symfony\Component\Translation\Tests\StringClass;
 
 class EmailCampaign extends Resource {
     /**
-     * @var string the Moxi Works Platform ID of the agent
-     *   moxi_works_agent_id is the Moxi Works Platform ID of the agent which a campaign is
+     * @var string the MoxiWorks Platform ID of the agent
+     *   moxi_works_agent_id is the MoxiWorks Platform ID of the agent which a campaign is
      *   or is to be associated with.
      *
-     *   this must be set for any Moxi Works Platform transaction
+     *   this must be set for any MoxiWorks Platform transaction
      *
      */
     public $moxi_works_agent_id;
@@ -22,7 +22,7 @@ class EmailCampaign extends Resource {
      * @var string your system's unique ID for the contact
      *   *your system's* unique ID for the Contact associated with this campaign
      *
-     *   this must be set for any Moxi Works Platform transaction
+     *   this must be set for any MoxiWorks Platform transaction
      *
      */
     public $partner_contact_id;
@@ -74,13 +74,13 @@ class EmailCampaign extends Resource {
     public $next_scheduled;
 
     /**
-     * Search for EmailCampaign on Moxi Works Platform.
+     * Search for EmailCampaign on MoxiWorks Platform.
      *
      *  <code>
      *  \MoxiworksPlatform\Contact::search([moxi_works_agent_id: 'abc123', partner_contact_id: 'MySystemContactID'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Agent ID for the agent to which this contact is to be associated
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The MoxiWorks Agent ID for the agent to which this contact is to be associated
      *      <br><b>partner_contact_id *REQUIRED* </b>  your system's ID for a specific contact for whom email campaigns are to be returned
      *
      *

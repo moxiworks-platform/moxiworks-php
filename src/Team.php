@@ -131,14 +131,14 @@ class Team extends Resource {
     }
 
     /**
-     * Find an Team on Moxi Works Platform.
+     * Find an Team on MoxiWorks Platform.
      *
-     * find can be performed including the Moxi Works Team ID in a parameter array
+     * find can be performed including the MoxiWorks Team ID in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Team::find([moxi_works_team_id: 'abc123'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_team_id *REQUIRED* </b>The Moxi Works Team ID for the team
+     *       <br><b>moxi_works_team_id *REQUIRED* </b>The MoxiWorks Team ID for the team
      *
      *
      * @return Team|null
@@ -152,14 +152,14 @@ class Team extends Resource {
     }
 
     /**
-     * Search for Teams by Company on Moxi Works Platform.
+     * Search for Teams by Company on MoxiWorks Platform.
      *
      * search can be performed by including moxi_works_company_id and updated_since in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Team::search([moxi_works_company_id: 'abc123'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_company_id *REQUIRED* </b> string The Moxi Works Company ID for the company in which we are searching for teams
+     *       <br><b>moxi_works_company_id *REQUIRED* </b> string The MoxiWorks Company ID for the company in which we are searching for teams
      *
      *       <h2>
      *     optional Task search parameters

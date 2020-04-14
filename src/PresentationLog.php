@@ -12,7 +12,7 @@ use Symfony\Component\Translation\Tests\StringClass;
 class PresentationLog extends Resource {
 
     /**
-     * @var string This is the Moxi Works Platform ID of the presentation_log which an ActionLog entry is associated with. This will be an RFC 4122 compliant UUID.
+     * @var string This is the MoxiWorks Platform ID of the presentation_log which an ActionLog entry is associated with. This will be an RFC 4122 compliant UUID.
      */
     public $agent_uuid;
 
@@ -107,14 +107,14 @@ class PresentationLog extends Resource {
     }
 
     /**
-     * Search for PresentationLogs by Agent ID on Moxi Works Platform.
+     * Search for PresentationLogs by Agent ID on MoxiWorks Platform.
      *
      * search can be performed by including moxi_works_company_id and updated_since in a parameter array
      *  <code>
      *  \MoxiworksPlatform\PresentationLog::search([created_after: 1234, created_before: 2345])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_company_id  </b> string The Moxi Works Company ID for the company in which we are searching for presentation logs
+     *       <br><b>moxi_works_company_id  </b> string The MoxiWorks Company ID for the company in which we are searching for presentation logs
      *       <h2>
      *     optional Task search parameters
      * </h2>

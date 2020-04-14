@@ -11,8 +11,8 @@ use Symfony\Component\Translation\Tests\StringClass;
 
 class ActionLog extends Resource {
     /**
-     * @var string the Moxi Works Platform ID of the agent
-     *   moxi_works_agent_id is the Moxi Works Platform ID of the agent which an action log entry is
+     * @var string the MoxiWorks Platform ID of the agent
+     *   moxi_works_agent_id is the MoxiWorks Platform ID of the agent which an action log entry is
      *   or is to be associated with.
      *
      *   this must be set for any ActionLog create transaction
@@ -65,7 +65,7 @@ class ActionLog extends Resource {
      * @var array of image associative arrays associated with the listing in the format
      *
      * [
-     *      "moxi_works_action_log_id" => "(string) unique identifier for the Moxi Works Platform ActionLog entry",
+     *      "moxi_works_action_log_id" => "(string) unique identifier for the MoxiWorks Platform ActionLog entry",
      *      "type" => "(string) the type of ActionLog entry this is. The string should be formatted in lowercase with an underscore between each word",
      *      "timestamp" => "(Integer) Unix timestamp for the creation time of the ActionLog entry",
      *      "log_data" => "(Dictionary) the payload data of the ActionLog entry. The structure returned is dependent on the kind of ActionLog entry this is"
@@ -86,7 +86,7 @@ class ActionLog extends Resource {
     }
 
     /**
-     *  Create an ActionLog entry on The Moxi Works Platform
+     *  Create an ActionLog entry on The MoxiWorks Platform
      * <code>
      *   MoxiworksPlatform\ActionLog::create([
      *     moxi_works_agent_id: '123abc',
@@ -96,7 +96,7 @@ class ActionLog extends Resource {
      * </code>
      *
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Agent ID for the agent to which this ActionLog entry is to be associated
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The MoxiWorks Agent ID for the agent to which this ActionLog entry is to be associated
      *       <br><b>partner_contact_id *REQUIRED* </b>Your system's unique ID for the contact for whom the ActionLog entry regards.
      *      <br><b>title</b>  string  string a short description of the ActionLog entry (should be 85 characters or less)
      *      <br><b>body</b>  string the body of the ActionLog entry (should be 255 characters or less)
@@ -111,14 +111,35 @@ class ActionLog extends Resource {
     }
 
     /**
-     * Search ActionLogs for a specific Contact on Moxi Works Platform.
+     * Remove an ActionLog entry your system has previously created on the MoxiWorks Platform
+     * <code>
+     *   MoxiworksPlatform\ActionLog::delete([
+     *     moxi_works_action_log_id: '123abc']);
+     * </code>
+     *
+     * @param array $attributes
+     *       <br><b>moxi_works_action_log_id *REQUIRED* </b>The MoxiWorks ActionLog ID for the ActionLog entry  to be deleted
+     *
+     * @return ActionLog|null
+     *
+     * @throws ArgumentException if required parameters are not included
+     * @throws RemoteRequestFailureException
+     */
+    public function delete() {
+        $url = Config::getUrl() . "/api/action_logs/". $this->moxi_works_action_log_id;
+        return ActionLog::sendRequest('DELETE', (array) $this, $url);
+    }
+
+
+    /**
+     * Search ActionLogs for a specific Contact on MoxiWorks Platform.
      *
      * search can be performed by including date_start and date_end in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Contact::search([moxi_works_agent_id: 'abc123', partner_contact_id: 'abc123'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b> string The Moxi Works Agent ID for the agent to which this ActionLog entry is associated
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b> string The MoxiWorks Agent ID for the agent to which this ActionLog entry is associated
      *       <br><b>partner_contact_id *REQUIRED* </b>Your system's unique ID for the contact for whom the ActionLog entry regards.
      *
      *

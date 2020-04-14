@@ -55,15 +55,15 @@ class Gallery extends Resource {
     }
 
     /**
-     * Find an Gallery on Moxi Works Platform.
+     * Find an Gallery on MoxiWorks Platform.
      *
-     * find can be performed including the Moxi Works Gallery ID in a parameter array
+     * find can be performed including the MoxiWorks Gallery ID in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Gallery::find([moxi_works_agent_id: 'abc123'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Gallery ID for the gallery
-     *       <br><b>agent_uuid *REQUIRED* </b>The Moxi Works Gallery ID for the gallery
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The MoxiWorks Gallery ID for the gallery
+     *       <br><b>agent_uuid *REQUIRED* </b>The MoxiWorks Gallery ID for the gallery
      *
      *
      * @return Gallery|null

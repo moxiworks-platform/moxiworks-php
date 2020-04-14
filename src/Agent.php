@@ -12,10 +12,10 @@ use Symfony\Component\Translation\Tests\StringClass;
 
 class Agent extends Resource {
     /**
-     * @var string the Moxi Works Platform ID of the agent
-     *   moxi_works_agent_id is the Moxi Works Platform ID of the agent
+     * @var string the MoxiWorks Platform ID of the agent
+     *   moxi_works_agent_id is the MoxiWorks Platform ID of the agent
      *
-     *   this must be set for any Moxi Works Platform transaction
+     *   this must be set for any MoxiWorks Platform transaction
      *
      */
     public $moxi_works_agent_id;
@@ -265,15 +265,15 @@ class Agent extends Resource {
     }
 
     /**
-     * Find an Agent on Moxi Works Platform.
+     * Find an Agent on MoxiWorks Platform.
      *
-     * find can be performed including the Moxi Works Agent ID in a parameter array
+     * find can be performed including the MoxiWorks Agent ID in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Agent::find([moxi_works_agent_id: 'abc123'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The Moxi Works Agent ID for the agent
-     *       <br><b>agent_uuid *REQUIRED* </b>The Moxi Works UUID for the agent -- either
+     *       <br><b>moxi_works_agent_id *REQUIRED* </b>The MoxiWorks Agent ID for the agent
+     *       <br><b>agent_uuid *REQUIRED* </b>The MoxiWorks UUID for the agent -- either
      *
      *
      * @return Agent|null
@@ -290,14 +290,14 @@ class Agent extends Resource {
     }
 
     /**
-     * Search for Agents by Company on Moxi Works Platform.
+     * Search for Agents by Company on MoxiWorks Platform.
      *
      * search can be performed by including moxi_works_company_id and updated_since in a parameter array
      *  <code>
      *  \MoxiworksPlatform\Agent::search([moxi_works_company_id: 'abc123', updated_since: 1463595006])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_company_id *REQUIRED* </b> string The Moxi Works Company ID for the company in which we are searching for agents
+     *       <br><b>moxi_works_company_id *REQUIRED* </b> string The MoxiWorks Company ID for the company in which we are searching for agents
      *
      *       <h2>
      *     optional Task search parameters

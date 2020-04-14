@@ -10,33 +10,33 @@ use Symfony\Component\Translation\Tests\StringClass;
 class Group extends Resource
 {
     /**
-     * @var string the Moxi Works Platform ID of the agent
-     *   moxi_works_agent_id is the Moxi Works Platform ID of the agent which a group is
+     * @var string the MoxiWorks Platform ID of the agent
+     *   moxi_works_agent_id is the MoxiWorks Platform ID of the agent which a group is
      *   associated with.
      *
-     *   this or agent_uuid must be set for any Moxi Works Platform transaction
+     *   this or agent_uuid must be set for any MoxiWorks Platform transaction
      *
      */
     public $moxi_works_agent_id;
 
     /**
-     * @var string the Moxi Works UUID of the agent
+     * @var string the MoxiWorks UUID of the agent
      *   agent_uuid is the ID of the agent which a group is
      *   associated with.
      *
-     *   this or moxi_works_agent_id must be set for any Moxi Works Platform transaction
+     *   this or moxi_works_agent_id must be set for any MoxiWorks Platform transaction
      *
      */
     public $agent_uuid;
 
     /**
-     * @var string the name of the Group on the Moxi Works Platform
+     * @var string the name of the Group on the MoxiWorks Platform
      *
      */
     public $moxi_works_group_name;
 
     /**
-     * @var string the ID of the Group on the Moxi Works Platform
+     * @var string the ID of the Group on the MoxiWorks Platform
      *
      */
     public $moxi_works_group_id;
@@ -45,8 +45,8 @@ class Group extends Resource
      * @var boolean whether the group ID continues to exist beyond a name change.
      * Some providers (namely versions of Exchange) provide no permanent unique
      * identifier for groups. Group IDs for these providers are inherently transient.
-     * Moxi Works has no way to guarantee that any Group marked transient will
-     * persist since the name can be changed outside of The Moxi Works platform
+     * MoxiWorks has no way to guarantee that any Group marked transient will
+     * persist since the name can be changed outside of The MoxiWorks platform
      * and Exchange provides no persistent IDs for their Group entities.
      *
      */
@@ -93,18 +93,18 @@ class Group extends Resource
     }
 
     /**
-     * Find a specified Group by name on the Moxi Works Platform.
+     * Find a specified Group by name on the MoxiWorks Platform.
      *
-     * find can be performed including the Moxi Works Group ID and the Moxi Works Agent ID in a parameter array
+     * find can be performed including the MoxiWorks Group ID and the MoxiWorks Agent ID in a parameter array
      *
      *  use MoxiworksPlatform\Group::search to determine what group IDs are available.
      *  <code>
      *  \MoxiworksPlatform\Group::find([moxi_works_agent_id: 'abc123', moxi_works_group_id: 'groupId'])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The Moxi Works Agent ID for the agent to which this group is to be associated
-     *       <br><b>agent_uuid *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The Moxi Works Agent UUID for the agent to which this group is to be associated
-     *       <br><b>moxi_works_group_id *REQUIRED* </b>The Moxi Works Group Name for this Group
+     *       <br><b>moxi_works_agent_id *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The MoxiWorks Agent ID for the agent to which this group is to be associated
+     *       <br><b>agent_uuid *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The MoxiWorks Agent UUID for the agent to which this group is to be associated
+     *       <br><b>moxi_works_group_id *REQUIRED* </b>The MoxiWorks Group Name for this Group
      *
      *
      * @return Group|null
@@ -134,16 +134,16 @@ class Group extends Resource
     }
 
     /**
-     * Search for Groups or return all Groups for an Agent on Moxi Works Platform.
+     * Search for Groups or return all Groups for an Agent on MoxiWorks Platform.
      *
      * search can be performed by including moxi_works_group_name in parameters
      *  <code>
      *  \MoxiworksPlatform\Group::search([moxi_works_agent_id: 'abc123', moxi_works_group_name: foo])
      *  </code>
      * @param array $attributes
-     *       <br><b>moxi_works_agent_id *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The Moxi Works Agent ID for the agent to which this group is to be associated
-     *       <br><b>agent_uuid *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The Moxi Works Agent UUID for the agent to which this group is to be associated
-     *       <br><b>name </b> string The name of the Group on Moxi Works Platform
+     *       <br><b>moxi_works_agent_id *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The MoxiWorks Agent ID for the agent to which this group is to be associated
+     *       <br><b>agent_uuid *either agent_uuid or moxi_works_agent_id are REQUIRED* </b>The MoxiWorks Agent UUID for the agent to which this group is to be associated
+     *       <br><b>name </b> string The name of the Group on MoxiWorks Platform
      *
      *
      * @return Array of Group objects

@@ -4,22 +4,22 @@
 namespace MoxiworksPlatform;
 use Symfony\Component\Translation\Tests\StringClass;
 
-/** Object used to manage Moxi Works Platform credentials
+/** Object used to manage MoxiWorks Platform credentials
  *
  */
 class Credentials
 {
     /**
-     * @var StringClass Your Moxi Works Platform Identifier.
+     * @var StringClass Your MoxiWorks Platform Identifier.
      *
-     *  this must be set before any Moxi Works Platform calls can be made.
+     *  this must be set before any MoxiWorks Platform calls can be made.
      */
     private static $identifier;
 
     /**
-     * @var StringClass Your Moxi Works Platform secret.
+     * @var StringClass Your MoxiWorks Platform secret.
      *
-     *   this must be set before any Moxi Works Platform calls can be made
+     *   this must be set before any MoxiWorks Platform calls can be made
      */
     private static $secret;
 
@@ -31,10 +31,10 @@ class Credentials
 
     /**
      * Constructs a new MoxiworksPlatform\Credentials object, with the specified
-     * Moxi Works Platform Identifier and Moxi Works Platform Secret
+     * MoxiWorks Platform Identifier and MoxiWorks Platform Secret
      *
-     * @param StringClass $platform_id   Your Moxi Works Platform ID
-     * @param StringClass $secret  Your Moxi Works Platform Secret
+     * @param StringClass $platform_id   Your MoxiWorks Platform ID
+     * @param StringClass $secret  Your MoxiWorks Platform Secret
      */
     public function __construct($platform_id, $secret){
         Credentials::setIdentifier($platform_id);
@@ -54,21 +54,21 @@ class Credentials
     }
 
     /**
-     * @param $sec StringClass Your Moxi Works Platform secret
+     * @param $sec StringClass Your MoxiWorks Platform secret
      */
     public static function setSecret($sec) {
         Credentials::$secret = $sec;
     }
 
     /**
-     * @return StringClass Your Moxi Works Platform Identifier
+     * @return StringClass Your MoxiWorks Platform Identifier
      */
     public static function identifier() {
         return Credentials::$identifier;
     }
 
     /**
-     * @param $pid StringClass Your Moxi Works Platform ID
+     * @param $pid StringClass Your MoxiWorks Platform ID
      */
     public static function setIdentifier($pid) {
         Credentials::$identifier = $pid;
@@ -89,7 +89,7 @@ class Credentials
     }
 
     /**
-     * @return bool Whether the Moxi Works Platform Identifier and Secret have been set.
+     * @return bool Whether the MoxiWorks Platform Identifier and Secret have been set.
      */
     public static function ready() {
         return (null !== Credentials::getIdentifier() && null !== Credentials::getSecret());
@@ -97,7 +97,7 @@ class Credentials
 
 
     /**
-     * Returns the Moxi Works Platform Identifier for this credentials object.
+     * Returns the MoxiWorks Platform Identifier for this credentials object.
      *
      * @return string
      */
@@ -106,7 +106,7 @@ class Credentials
     }
 
     /**
-     * Returns the Moxi Works Platform secret for this credentials object.
+     * Returns the MoxiWorks Platform secret for this credentials object.
      *
      * @return string
      */
