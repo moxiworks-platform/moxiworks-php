@@ -23,9 +23,7 @@
     "guzzlehttp/psr7": "~1.0",
     "guzzlehttp/promises": "~1.0",
     "mtdowling/jmespath.php": "~2.2",
-    "phpunit/phpunit": "4.8.26",
-    "php-vcr/php-vcr": "1.2.8"
-
+    "symfony/dependency-injection": "~3.4"
   },
   "require-dev": {
     "ext-openssl": "*",
@@ -38,7 +36,9 @@
     "doctrine/cache": "~1.4",
     "nette/neon": "^2.3",
     "andrewsville/php-token-reflection": "^1.4",
-    "psr/cache": "^1.0"
+    "psr/cache": "^1.0",
+    "phpunit/phpunit": "*",
+    "php-vcr/php-vcr": "~1.2"
   },
   "suggest": {
     "ext-curl": "To send requests using cURL",
