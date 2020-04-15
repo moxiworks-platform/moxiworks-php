@@ -113,6 +113,11 @@ class Office extends Resource {
     public $region;
 
     /**
+     * @var string client office id
+     */
+    public $client_office_id;
+
+    /**
      * Office constructor.
      * @param array $data
      */
