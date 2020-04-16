@@ -11,6 +11,14 @@ use Symfony\Component\Translation\Tests\StringClass;
 
 class ActionLog extends Resource {
     /**
+     * @var string the MoxiWorks Platform ID of the ActionLog entry
+     *   moxi_works_action_log_id is the unique MoxiWorks Platform ID an ActionLog entry
+     *
+     *
+     */
+    public $moxi_works_action_log_id;
+
+    /**
      * @var string the MoxiWorks Platform ID of the agent
      *   moxi_works_agent_id is the MoxiWorks Platform ID of the agent which an action log entry is
      *   or is to be associated with.
@@ -62,6 +70,56 @@ class ActionLog extends Resource {
     public $timestamp;
 
     /**
+     * @var string
+     *  the agent_action type (if this is an agent_action ActionLog entry)
+     *   a valid agent_action is one of:  'inperson' 'mail' 'email' 'social' 'text' 'voicemail' 'phone' 'other'
+     *
+     *
+     */
+    public $agent_action;
+
+    /**
+     * @var string
+     * the street address associated with the location of an agent_action entry (if applicable)
+     *
+     */
+    public $agent_action_address;
+
+
+    /**
+     * @var string
+     * additional street address information associated with the location of an agent_action entry (if applicable)
+     *
+     */
+    public $agent_action_address2;
+
+
+    /**
+     * @var string
+     * the city associated with the location of an agent_action entry (if applicable)
+     *
+     */
+    public $agent_action_city;
+
+
+    /**
+     * @var string
+     * the state associated with the location of an agent_action entry (if applicable)
+     *
+     */
+    public $agent_action_state;
+
+
+
+    /**
+     * @var string
+     * the postal code associated with the location of an agent_action entry (if applicable)
+     *
+     */
+    public $agent_action_zip;
+
+
+    /**
      * @var array of image associative arrays associated with the listing in the format
      *
      * [
@@ -98,8 +156,15 @@ class ActionLog extends Resource {
      * @param array $attributes
      *       <br><b>moxi_works_agent_id *REQUIRED* </b>The MoxiWorks Agent ID for the agent to which this ActionLog entry is to be associated
      *       <br><b>partner_contact_id *REQUIRED* </b>Your system's unique ID for the contact for whom the ActionLog entry regards.
-     *      <br><b>title</b>  string  string a short description of the ActionLog entry (should be 85 characters or less)
-     *      <br><b>body</b>  string the body of the ActionLog entry (should be 255 characters or less)
+     *      <br><b>title</b> *REQUIRED*  string  string a short description of the ActionLog entry (should be 85 characters or less)
+     *      <br><b>body</b> *REQUIRED* string the body of the ActionLog entry (should be 255 characters or less)
+     *      <br><b>agent_action</b>  if creating an agent_action, set agent_action to one of 'inperson' 'mail' 'email' 'social' 'text' 'voicemail' 'phone' 'other'
+     *      <br><b>agent_action_address</b>  if creating an agent_action that has a location component ('inperson' 'other') use this field to denote the street address of the agent_action
+     *      <br><b>agent_action_address2</b>  if creating an agent_action that has a location component ('inperson' 'other') use this field to denote additional street address info of the agent_action
+     *      <br><b>agent_action_city</b>  if creating an agent_action that has a location component ('inperson' 'other') use this field to denote the city or locale of the agent_action
+     *      <br><b>agent_action_state</b>  if creating an agent_action that has a location component ('inperson' 'other') use this field to denote the state or province of the agent_action
+     *      <br><b>agent_action_zip</b>  if creating an agent_action that has a location component ('inperson' 'other') use this field to denote the postal code of the agent_action
+     *
      *
      * @return ActionLog|null
      *
